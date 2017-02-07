@@ -1,0 +1,67 @@
+- Interactive Simulation of Galaxy Formations
+
+    2015, Peter Lee (yauyul@andrew.cmu.edu)
+
+
+A visualization of early universe galaxy formation simulated using Volker
+Springel's GADGET-1 program for cosmological simulations, and plotted using a
+cuboid remapping method by J. Carson and M. White.
+
+Files in the serial package of Gadget-1.1 are in the S-Gadget group, with
+original copyright files included.
+
+More information on Gadget can be found at:
+http://wwwmpa.mpa-garching.mpg.de/gadget/
+
+--------------------------------------------------------------------------------
+
+Build and run in Xcode to start the simulation. (*, **)
+
+Point anywhere within the simulation to interact with the particles by adding
+a repulsive force at the location of the pointer/touch.
+
+Flip the switch to switch between repulsive/attractive force.
+
+EDIT: The switch has been replaced with a slider, the top being attractive force
+        and the bottom being repulsive
+
+Pinch to adjust the scale, pan with two fingers to focus on different parts of
+the simulation. (***)
+
+EDIT: These gestures have been removed as zooming in is not necessary for the game
+
+Four different initial condition files have been included in this package. Some
+parameters will need to be changed to run the different simulations (details
+in the parameter file parameterfiles/test.tex).
+
+EDIT: More intial condition files have been added
+
+
+** Note: Swift has gone through many version changes in the past year, and new
+releases are likely to happen frequently in the future. Minor syntax changes
+might be required before Xcode will compile this program. Most of these have
+been solved
+
+*** Note: Gestures are not refined for interaction since there were no tests
+conducted on actual hardware.
+
+--------------------------------------------------------------------------------
+
+Changes made to the original Gadget-1.1 distribution:
+
+Renamed main.c to gadget_main.c to avoid compiler confusion.
+Split the main() function for better control on initialization in background
+thread, and to avoid duplicate _main symbols.
+Removed many preprocessor macros, leaving mostly only relevant ones.
+
+Renamed begrun.c to begrun.m, changing the compiler from C to Objective C,
+thus allowing the NSBundle method of retriving and storing files to work
+
+Other changed files (modifications detailed in each file):
+  - allvars.c
+  - allvars.h
+  - begrun.m
+  - init.c
+  - run.c
+  - read_ic.c
+  - io.c

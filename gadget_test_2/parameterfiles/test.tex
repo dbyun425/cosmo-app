@@ -1,0 +1,134 @@
+%  Relevant files
+
+InitCondFile  		/Users/lukajelenak/Documents/gadget_test_2/gadget_test_2/ics2
+% ics1: 4096 particles, z=63
+% ics2: 32768 particles, z=63
+% ics3: 32768 particles, z=15
+% ics4: 4096 particles, Omega0=1, OmegaLambda=0, z=15
+OutputDir         /Users/lukajelenak/Documents/gadget_test_2/gadget_test_2/output
+
+EnergyFile        energy.txt
+InfoFile          info.txt
+TimingsFile       timings.txt
+CpuFile           cpu.txt
+
+RestartFile       restart
+SnapshotFileBase  snapshot
+
+
+% CPU-time limit
+
+TimeLimitCPU      1200 % 20 minutes
+ResubmitOn        0
+ResubmitCommand   xyz
+
+
+% Code options
+
+ICFormat              1
+ComovingIntegrationOn 1
+
+CoolingOn 0
+
+%  Caracteristics of run
+
+TimeBegin           0.015625  ; z=63
+TimeMax	            6.0
+
+Omega0	              0.3  % 0.3 original
+OmegaLambda           0.7  % 0.7 original
+OmegaBaryon           0.0
+HubbleParam           0.7   ; only needed for cooling
+
+BoxSize                50000.0
+PeriodicBoundariesOn   1
+
+
+% Output frequency
+
+OutputListFilename   /Users/lukajelenak/Documents/gadget_test_2/gadget_test_2/parameterfiles/outputs_lcdm_gas.txt
+OutputListOn        1
+
+TimeBetSnapshot        0
+TimeOfFirstSnapshot    0
+ 
+CpuTimeBetRestartFile  3600.0
+
+TimeBetStatistics      0.1
+
+
+% Accuracy of time integration
+
+TypeOfTimestepCriterion 1
+ErrTolIntAccuracy       1.0
+ErrTolVelScale          100.0
+
+MaxSizeTimestep        0.01 
+MinSizeTimestep        0
+
+
+% Tree algorithm and force accuracy
+
+ErrTolTheta            0.6            
+
+TypeOfOpeningCriterion 1
+ErrTolForceAcc         0.02
+
+
+MaxNodeMove            0.05
+TreeUpdateFrequency    0.1
+
+
+
+%  Parameters of SPH
+
+DesNumNgb           40
+
+ArtBulkViscConst    0.75
+InitGasTemp         1000.0  % initial gas temperature in K, only used if not given in IC file
+MinGasTemp          1000.0    
+CourantFac          0.15
+
+
+% Further code parameters
+
+PartAllocFactor       1.0
+TreeAllocFactor       0.8
+
+
+
+% System of units
+
+UnitLength_in_cm         3.085678e21        ;  1.0 kpc
+UnitMass_in_g            1.989e43           ;  1.0e10 solar masses
+UnitVelocity_in_cm_per_s 1e5                ;  1 km/sec
+GravityConstantInternal  0
+
+
+% Softening lengths
+
+MinGasHsmlFractional     1.0  % minimum gas smoothing in terms of the gravitational softening length
+
+SofteningGas       100.0
+SofteningHalo      100.0
+SofteningDisk      0.0
+SofteningBulge     0.0           
+SofteningStars     0.0
+
+SofteningGasMaxPhys       200.0
+SofteningHaloMaxPhys      200.0
+SofteningDiskMaxPhys      0.0
+SofteningBulgeMaxPhys     0.0           
+SofteningStarsMaxPhys     0.0
+
+
+
+
+
+
+
+
+
+
+
+
