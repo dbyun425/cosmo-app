@@ -189,9 +189,9 @@ class GameScene: SKScene {
         if (touches.count == 1) {
             // update touch location for particle interaction
             //            println("touches moved, interaction: \(interaction)")
-            interaction = 0
+            //interaction = 0
             self.updateTouchLocation(touches)
-            interaction = 1
+            //interaction = 1
         }
     }
     
