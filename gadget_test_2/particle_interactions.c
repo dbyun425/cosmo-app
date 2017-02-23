@@ -23,7 +23,7 @@ void modify_accel() {
     //for (int i = 1; i <= NumPart; i++) P[i].Vel[2] = 0;
     
     if (interaction == 0){
-        for(int i = 0; i <= NumPart; i++) {
+        for(int i = 1; i <= NumPart; i++) {
             P[i].addedVel[0] = P[i].Vel[0];
             P[i].addedVel[1] = P[i].Vel[1];
         }

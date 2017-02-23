@@ -326,7 +326,7 @@ class GameScene: SKScene {
     }
     
     func union_find() {
-        let range = Float(1000)
+        let range = Float(0.5)
         var dist = Float(0)
         
         //if two particles are within certain distance of each other
@@ -349,8 +349,7 @@ class GameScene: SKScene {
                                 let info = temp[k]
                                 let (x1,y1,_) = P[info].Pos
                                 let (equivNum2,_) = self.equivClass[info]
-                                dist = sqrt((x0-x1)*(x0-x1) + (y0-y1)*(y0-y1))
-                                
+                                dist = sqrt((x0-x1)*(x0-x1) + (y0-y1)*(y0-y1)) // Why does the distance become zero??
                                 if ((range - dist) >= 0.0) {
                                     self.equivClass[info] = (min(equivNum1,equivNum2),true)
                                 }

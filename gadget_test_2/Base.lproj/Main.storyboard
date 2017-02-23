@@ -23,11 +23,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-Rd-H9D">
-                                <rect key="frame" x="454" y="213" width="140" height="30"/>
+                                <rect key="frame" x="20" y="20" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Initial Condition 1"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="ZzL-SZ-jpm"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="p4S-xo-Abu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-jd-ddL">
-                                <rect key="frame" x="20" y="674" width="1519" height="50"/>
+                                <rect key="frame" x="20" y="674" width="623" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7cj-jd-ddL" secondAttribute="height" multiplier="911:30" id="20q-RG-sXP"/>
                                 </constraints>
@@ -132,9 +132,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
                                 <connections>
-                                    <segue destination="5fu-Lr-dbl" kind="show" id="bic-cO-nRB"/>
+                                    <segue destination="5fu-Lr-dbl" kind="popoverPresentation" popoverAnchorView="oM8-k4-2QY" id="ams-aA-2CY">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repulsive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-f8-S0d">
+                                <rect key="frame" x="20" y="78" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90209642152805058" green="1" blue="0.9923367528015824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attractive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-ox-Jxo">
+                                <rect key="frame" x="20" y="700" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90209642150000002" green="1" blue="0.9923367528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
