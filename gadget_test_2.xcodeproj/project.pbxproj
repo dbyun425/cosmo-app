@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0F830741E6F46E600059ADE /* ics_100_32_neg1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */; };
+		E0F830751E6F46E600059ADE /* ics_100_32_neg2_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830681E6F46E600059ADE /* ics_100_32_neg2_a_slice */; };
+		E0F830761E6F46E600059ADE /* ics_100_32_plus1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830691E6F46E600059ADE /* ics_100_32_plus1_a_slice */; };
+		E0F830771E6F46E600059ADE /* ics_100_32_plus2_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F8306A1E6F46E600059ADE /* ics_100_32_plus2_a_slice */; };
+		E0F830781E6F46E600059ADE /* ics_100_32_plus3_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F8306B1E6F46E600059ADE /* ics_100_32_plus3_a_slice */; };
+		E0F830791E6F46E600059ADE /* ics_100_32_zero_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F8306C1E6F46E600059ADE /* ics_100_32_zero_a_slice */; };
+		E0F8307A1E6F46E600059ADE /* ics_100_64_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F8306D1E6F46E600059ADE /* ics_100_64_a_slice */; };
+		E0F8307B1E6F46E600059ADE /* ics_100_64_neg1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F8306E1E6F46E600059ADE /* ics_100_64_neg1_a_slice */; };
+		E0F8307C1E6F46E600059ADE /* ics_100_64_neg2_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F8306F1E6F46E600059ADE /* ics_100_64_neg2_a_slice */; };
+		E0F8307D1E6F46E600059ADE /* ics_100_64_plus1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830701E6F46E600059ADE /* ics_100_64_plus1_a_slice */; };
+		E0F8307E1E6F46E600059ADE /* ics_100_64_plus2_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830711E6F46E600059ADE /* ics_100_64_plus2_a_slice */; };
+		E0F8307F1E6F46E600059ADE /* ics_100_64_plus3_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830721E6F46E600059ADE /* ics_100_64_plus3_a_slice */; };
+		E0F830801E6F46E600059ADE /* ics_100_64_zero_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830731E6F46E600059ADE /* ics_100_64_zero_a_slice */; };
 		E745487E1B1E4BCC001D885B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745487D1B1E4BCC001D885B /* AppDelegate.swift */; };
 		E74548821B1E4BCC001D885B /* GameScene_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74548811B1E4BCC001D885B /* GameScene_old.swift */; };
 		E74548841B1E4BCC001D885B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74548831B1E4BCC001D885B /* GameViewController.swift */; };
@@ -84,6 +97,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_neg1_a_slice; sourceTree = "<group>"; };
+		E0F830681E6F46E600059ADE /* ics_100_32_neg2_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_neg2_a_slice; sourceTree = "<group>"; };
+		E0F830691E6F46E600059ADE /* ics_100_32_plus1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_plus1_a_slice; sourceTree = "<group>"; };
+		E0F8306A1E6F46E600059ADE /* ics_100_32_plus2_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_plus2_a_slice; sourceTree = "<group>"; };
+		E0F8306B1E6F46E600059ADE /* ics_100_32_plus3_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_plus3_a_slice; sourceTree = "<group>"; };
+		E0F8306C1E6F46E600059ADE /* ics_100_32_zero_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_zero_a_slice; sourceTree = "<group>"; };
+		E0F8306D1E6F46E600059ADE /* ics_100_64_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_a_slice; sourceTree = "<group>"; };
+		E0F8306E1E6F46E600059ADE /* ics_100_64_neg1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_neg1_a_slice; sourceTree = "<group>"; };
+		E0F8306F1E6F46E600059ADE /* ics_100_64_neg2_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_neg2_a_slice; sourceTree = "<group>"; };
+		E0F830701E6F46E600059ADE /* ics_100_64_plus1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_plus1_a_slice; sourceTree = "<group>"; };
+		E0F830711E6F46E600059ADE /* ics_100_64_plus2_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_plus2_a_slice; sourceTree = "<group>"; };
+		E0F830721E6F46E600059ADE /* ics_100_64_plus3_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_plus3_a_slice; sourceTree = "<group>"; };
+		E0F830731E6F46E600059ADE /* ics_100_64_zero_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_zero_a_slice; sourceTree = "<group>"; };
 		E73C038D1B26084100B2A71A /* ics3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics3; sourceTree = "<group>"; };
 		E74548781B1E4BCC001D885B /* gadget_test_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gadget_test_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E745487C1B1E4BCC001D885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -257,6 +283,19 @@
 				E74548A51B1E4CC2001D885B /* allvars.c */,
 				E74548A61B1E4CC2001D885B /* allvars.h */,
 				FE323E8E1D1C74DB00BBE397 /* begrun.m */,
+				E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */,
+				E0F830681E6F46E600059ADE /* ics_100_32_neg2_a_slice */,
+				E0F830691E6F46E600059ADE /* ics_100_32_plus1_a_slice */,
+				E0F8306A1E6F46E600059ADE /* ics_100_32_plus2_a_slice */,
+				E0F8306B1E6F46E600059ADE /* ics_100_32_plus3_a_slice */,
+				E0F8306C1E6F46E600059ADE /* ics_100_32_zero_a_slice */,
+				E0F8306D1E6F46E600059ADE /* ics_100_64_a_slice */,
+				E0F8306E1E6F46E600059ADE /* ics_100_64_neg1_a_slice */,
+				E0F8306F1E6F46E600059ADE /* ics_100_64_neg2_a_slice */,
+				E0F830701E6F46E600059ADE /* ics_100_64_plus1_a_slice */,
+				E0F830711E6F46E600059ADE /* ics_100_64_plus2_a_slice */,
+				E0F830721E6F46E600059ADE /* ics_100_64_plus3_a_slice */,
+				E0F830731E6F46E600059ADE /* ics_100_64_zero_a_slice */,
 				E74548AA1B1E4CC2001D885B /* density.c */,
 				E74548AB1B1E4CC2001D885B /* endrun.c */,
 				E7BDC1671B20F7CB00562C53 /* ewald_table_64.dat */,
@@ -416,6 +455,8 @@
 				E7A11C161B22079B0056DF1C /* parameters-usedvalues in Resources */,
 				E7A11C181B22079B0056DF1C /* snapshot_000 in Resources */,
 				FED766EA1D1AFEFD008CC905 /* ics_100_64_a_slice-2 in Resources */,
+				E0F830741E6F46E600059ADE /* ics_100_32_neg1_a_slice in Resources */,
+				E0F830781E6F46E600059ADE /* ics_100_32_plus3_a_slice in Resources */,
 				E7B368E31BAE96B3007ECAB5 /* COPYRIGHT in Resources */,
 				E745488C1B1E4BCC001D885B /* LaunchScreen.xib in Resources */,
 				FED681241D1C7B7E00A80DE7 /* ics_100_64_a3_slice in Resources */,
@@ -425,21 +466,32 @@
 				E74549021B1E4CFD001D885B /* lcdm_gas.tex in Resources */,
 				E74548891B1E4BCC001D885B /* Images.xcassets in Resources */,
 				FE86776D1D3023F300B2D908 /* gadgetpicture.jpg in Resources */,
+				E0F830771E6F46E600059ADE /* ics_100_32_plus2_a_slice in Resources */,
 				E74549011B1E4CFD001D885B /* gassphere.tex in Resources */,
 				FE4C6DD11D3031F500C980BF /* MenuScene.sks in Resources */,
 				E74548FF1B1E4CFD001D885B /* cluster.tex in Resources */,
 				E7B368E11BAE96B3007ECAB5 /* AUTHORS in Resources */,
 				FED766EC1D1B2A61008CC905 /* ics_100_64_c_slice in Resources */,
 				E7A11C171B22079B0056DF1C /* restart in Resources */,
+				E0F830751E6F46E600059ADE /* ics_100_32_neg2_a_slice in Resources */,
 				E7A11C131B22079B0056DF1C /* cpu.txt in Resources */,
+				E0F830801E6F46E600059ADE /* ics_100_64_zero_a_slice in Resources */,
 				E74549001B1E4CFD001D885B /* galaxy.tex in Resources */,
 				E7A11C141B22079B0056DF1C /* energy.txt in Resources */,
+				E0F830791E6F46E600059ADE /* ics_100_32_zero_a_slice in Resources */,
 				E74548871B1E4BCC001D885B /* Main.storyboard in Resources */,
+				E0F8307C1E6F46E600059ADE /* ics_100_64_neg2_a_slice in Resources */,
+				E0F8307B1E6F46E600059ADE /* ics_100_64_neg1_a_slice in Resources */,
+				E0F8307F1E6F46E600059ADE /* ics_100_64_plus3_a_slice in Resources */,
 				FE1388631D19DE26001024A0 /* ics_100_128_a_slice in Resources */,
 				E7B368E21BAE96B3007ECAB5 /* COPYING in Resources */,
+				E0F830761E6F46E600059ADE /* ics_100_32_plus1_a_slice in Resources */,
+				E0F8307D1E6F46E600059ADE /* ics_100_64_plus1_a_slice in Resources */,
 				E7A11C191B22079B0056DF1C /* snapshot_001 in Resources */,
 				E74549031B1E4CFD001D885B /* outputs_lcdm_gas.txt in Resources */,
 				E7A11C1D1B22079B0056DF1C /* snapshot_005 in Resources */,
+				E0F8307E1E6F46E600059ADE /* ics_100_64_plus2_a_slice in Resources */,
+				E0F8307A1E6F46E600059ADE /* ics_100_64_a_slice in Resources */,
 				E7B368E51BAE96D0007ECAB5 /* README in Resources */,
 				E7A11C151B22079B0056DF1C /* info.txt in Resources */,
 				E7A11C1E1B22079B0056DF1C /* timings.txt in Resources */,

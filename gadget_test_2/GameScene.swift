@@ -253,7 +253,7 @@ class GameScene: SKScene {
                 self.equivClass[n+1] = (n+1,false)
                 self.equivCount[n+1] = 1
             }
-            union_find()
+            //union_find()
             self.timeCounter = 0
             
             for y in 0 ..< self.chainMesh.count {
