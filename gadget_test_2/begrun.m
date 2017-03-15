@@ -36,7 +36,7 @@ void begrun(void)
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"readIn" ofType:@"bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
     NSString *resource1 = [bundle pathForResource:@"ewald_table_64" ofType:@"dat"];
-    NSString *resource2 = [bundle pathForResource:@"ics_100_64_c_slice" ofType:@""];
+    NSString *resource2 = [bundle pathForResource:@"ics_100_32_neg1_a_slice" ofType:@""];
     ewaldPath = [resource1 UTF8String];
     icsPath = [resource2 UTF8String];
     

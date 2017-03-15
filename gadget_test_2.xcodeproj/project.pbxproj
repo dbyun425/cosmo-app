@@ -20,6 +20,7 @@
 		E0F8307E1E6F46E600059ADE /* ics_100_64_plus2_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830711E6F46E600059ADE /* ics_100_64_plus2_a_slice */; };
 		E0F8307F1E6F46E600059ADE /* ics_100_64_plus3_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830721E6F46E600059ADE /* ics_100_64_plus3_a_slice */; };
 		E0F830801E6F46E600059ADE /* ics_100_64_zero_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830731E6F46E600059ADE /* ics_100_64_zero_a_slice */; };
+		E0FA93531E78ED050072820F /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FA93521E78ED050072820F /* MenuController.swift */; };
 		E745487E1B1E4BCC001D885B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E745487D1B1E4BCC001D885B /* AppDelegate.swift */; };
 		E74548821B1E4BCC001D885B /* GameScene_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74548811B1E4BCC001D885B /* GameScene_old.swift */; };
 		E74548841B1E4BCC001D885B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74548831B1E4BCC001D885B /* GameViewController.swift */; };
@@ -110,6 +111,7 @@
 		E0F830711E6F46E600059ADE /* ics_100_64_plus2_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_plus2_a_slice; sourceTree = "<group>"; };
 		E0F830721E6F46E600059ADE /* ics_100_64_plus3_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_plus3_a_slice; sourceTree = "<group>"; };
 		E0F830731E6F46E600059ADE /* ics_100_64_zero_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_64_zero_a_slice; sourceTree = "<group>"; };
+		E0FA93521E78ED050072820F /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		E73C038D1B26084100B2A71A /* ics3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics3; sourceTree = "<group>"; };
 		E74548781B1E4BCC001D885B /* gadget_test_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gadget_test_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E745487C1B1E4BCC001D885B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				E7B368E81BAEA39B007ECAB5 /* GameScene.swift */,
 				E74548811B1E4BCC001D885B /* GameScene_old.swift */,
 				E74548831B1E4BCC001D885B /* GameViewController.swift */,
+				E0FA93521E78ED050072820F /* MenuController.swift */,
 				E74548851B1E4BCC001D885B /* Main.storyboard */,
 				E74548881B1E4BCC001D885B /* Images.xcassets */,
 				E745488A1B1E4BCC001D885B /* LaunchScreen.xib */,
@@ -524,6 +527,7 @@
 				E74548821B1E4BCC001D885B /* GameScene_old.swift in Sources */,
 				E74548D41B1E4CF0001D885B /* potential.c in Sources */,
 				E74548841B1E4BCC001D885B /* GameViewController.swift in Sources */,
+				E0FA93531E78ED050072820F /* MenuController.swift in Sources */,
 				E74548DB1B1E4CF0001D885B /* system.c in Sources */,
 				E74548DA1B1E4CF0001D885B /* run.c in Sources */,
 				E74548C41B1E4CC2001D885B /* hydra.c in Sources */,

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu Controller-->
         <scene sceneID="KI5-tw-4FK">
             <objects>
-                <viewController id="5fu-Lr-dbl" sceneMemberID="viewController">
+                <viewController id="5fu-Lr-dbl" customClass="MenuController" customModule="gadget_test_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cWv-Db-YyY"/>
                         <viewControllerLayoutGuide type="bottom" id="ZB0-km-e62"/>
@@ -23,11 +23,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-Rd-H9D">
-                                <rect key="frame" x="20" y="20" width="140" height="30"/>
+                                <rect key="frame" x="20" y="20" width="140" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Initial Condition 1"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="p4S-xo-Abu"/>
+                                    <action selector="initCond1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="CkX-uM-F3Q"/>
+                                    <action selector="initalCondition1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="0zT-M5-T8V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,9 +133,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
                                 <connections>
-                                    <segue destination="5fu-Lr-dbl" kind="popoverPresentation" popoverAnchorView="oM8-k4-2QY" id="ams-aA-2CY">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="5fu-Lr-dbl" kind="show" id="BSr-0c-BFs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repulsive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-f8-S0d">
@@ -166,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-507.42187499999994" y="-203.90625"/>
+            <point key="canvasLocation" x="-498" y="-182"/>
         </scene>
     </scenes>
 </document>
