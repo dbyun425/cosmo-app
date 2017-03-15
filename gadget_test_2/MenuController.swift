@@ -12,7 +12,14 @@ class MenuController: UIViewController {
 
     @IBAction func initCond1(_ sender: UIButton) {
         //let initString = "ics_32_neg1_a_slice"
-        print("ics_32_neg1_a_slice")
+        
+        // Gadget ended, free memory
+        free_memory()
+        
+        let input = "ics_100_32_neg1_a_slice"
+        gadget_main_setup(strdup(input))
+        gadget_main_run()
+        
     }
     
     override func viewDidLoad() {

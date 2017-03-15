@@ -26,7 +26,7 @@
  *  Finally, run() is started, the main simulation loop,
  *  which iterates over the timesteps.
  */
-int gadget_main_setup() {
+int gadget_main_setup(char* input) {
     double t0, t1;
     
     //  if(argc<2) {
@@ -58,7 +58,7 @@ int gadget_main_setup() {
     
     t0 = second();
     
-    begrun();     /* set-up run  */
+    begrun(input);     /* set-up run  */
     
     t1 = second();
     CPUThisRun += timediff(t0, t1);

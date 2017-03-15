@@ -12,14 +12,14 @@
 
 // MODIFICATION
 // new functions
-int gadget_main_setup();
+int gadget_main_setup(char*);
 int gadget_main_run();
 void modify_accel();
 
 void   advance(void);
 void   allocate_commbuffers(void);
 void   allocate_memory(void);
-void   begrun(void);
+void   begrun(char*);
 void   close_outputfiles(void);
 void   check_omega(void);
 void   compute_accelerations(int mode);

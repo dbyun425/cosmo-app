@@ -29,14 +29,15 @@
  *  Reading the parameterfile, setting units,
  *  getting IC's/restart files, etc.
  */
-void begrun(void)
+void begrun(char* input)
 {
+    NSString* string = [NSString stringWithFormat:@"%s" , input];
     struct global_data_all_processes all;
     
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"readIn" ofType:@"bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
     NSString *resource1 = [bundle pathForResource:@"ewald_table_64" ofType:@"dat"];
-    NSString *resource2 = [bundle pathForResource:@"ics_100_32_neg1_a_slice" ofType:@""];
+    NSString *resource2 = [bundle pathForResource:string ofType:@""];
     ewaldPath = [resource1 UTF8String];
     icsPath = [resource2 UTF8String];
     

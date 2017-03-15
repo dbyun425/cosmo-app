@@ -67,8 +67,8 @@ class GameViewController: UIViewController {
         let queue = DispatchQueue.global(qos: DispatchQoS.QoSClass.utility)
         
         queue.async(execute: { () -> Void in
-            
-            gadget_main_setup()
+            let input = "ics_100_32_neg1_a_slice"
+            gadget_main_setup(strdup(input))
             
             // release semaphore
             self.semaphore.signal()
