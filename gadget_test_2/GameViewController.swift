@@ -25,9 +25,18 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, MenuControllerDelegate {
     var semaphore: DispatchSemaphore
     
+    func initCond1Pressed() {
+        //let initString = "ics_32_neg1_a_slice"
+        
+        // Gadget ended, free memory
+        //free_memory()
+        
+        let input = "ics_100_32_neg1_a_slice"
+        gadget_main_setup(strdup(input))
+        gadget_main_run()    }
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{

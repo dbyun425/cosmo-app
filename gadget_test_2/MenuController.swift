@@ -8,18 +8,14 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+protocol MenuControllerDelegate {
+    func initCond1Pressed()
+}
 
-    @IBAction func initCond1(_ sender: UIButton) {
-        //let initString = "ics_32_neg1_a_slice"
-        
-        // Gadget ended, free memory
-        free_memory()
-        
-        let input = "ics_100_32_neg1_a_slice"
-        gadget_main_setup(strdup(input))
-        gadget_main_run()
-        
+class MenuController: UIViewController {
+    var delegate: MenuControllerDelegate!
+    @IBAction func initCond1(){
+        delegate.initCond1Pressed()
     }
     
     override func viewDidLoad() {
