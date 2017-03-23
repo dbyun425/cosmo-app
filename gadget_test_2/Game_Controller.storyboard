@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4128" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu Controller-->
+        <scene sceneID="KI5-tw-4FK">
+            <objects>
+                <viewController storyboardIdentifier="LevelMenu" id="5fu-Lr-dbl" customClass="MenuController" customModule="gadget_test_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cWv-Db-YyY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZB0-km-e62"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yvj-4p-wmU">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-Rd-H9D">
+                                <rect key="frame" x="20" y="20" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Condition 1"/>
+                                <connections>
+                                    <action selector="initCond1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="CkX-uM-F3Q"/>
+                                    <action selector="initalCondition1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="0zT-M5-T8V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLA-Lv-w5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521.484375" y="-978.125"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="gadget_test_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-jd-ddL">
+                                <rect key="frame" x="20" y="674" width="623" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7cj-jd-ddL" secondAttribute="height" multiplier="911:30" id="20q-RG-sXP"/>
+                                </constraints>
+                            </stackView>
+                            <progressView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-Tv-OKD">
+                                <rect key="frame" x="55" y="729" width="911" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="901" id="NT9-lv-nFo"/>
+                                </constraints>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-K5-em4">
+                                <rect key="frame" x="-191" y="441" width="1519" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-ue-Ysf">
+                                        <rect key="frame" x="0.0" y="0.0" width="1519" height="50"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jEP-ue-Ysf" firstAttribute="centerY" secondItem="aZ5-K5-em4" secondAttribute="centerY" id="4qr-wI-6Ol"/>
+                                    <constraint firstAttribute="width" secondItem="aZ5-K5-em4" secondAttribute="height" multiplier="911:30" id="WIi-9W-Y2i"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-wv-faV">
+                                <rect key="frame" x="-466" y="369" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0OQ-Bo-3EH">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4z5-qA-Rt8">
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2MD-0S-VJa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-m8-k2q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8HN-er-RR0">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zd7-ip-eOa">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kCB-ys-SGb">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                                                        <subviews>
+                                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w8x-sM-deg">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                                                            </stackView>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="COk-4Z-bpW">
+                                <rect key="frame" x="-215" y="369" width="504" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="28Z-8h-uIp"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="attractToRepel:" destination="BV1-FR-VrT" eventType="valueChanged" id="bIh-WV-6fZ"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM8-k4-2QY">
+                                <rect key="frame" x="59" y="28" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Menu"/>
+                                <connections>
+                                    <segue destination="5fu-Lr-dbl" kind="popoverPresentation" identifier="gameToMenu" popoverAnchorView="oM8-k4-2QY" id="iC8-d8-are">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repulsive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-f8-S0d">
+                                <rect key="frame" x="20" y="78" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90209642152805058" green="1" blue="0.9923367528015824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attractive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSb-ox-Jxo">
+                                <rect key="frame" x="20" y="700" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90209642150000002" green="1" blue="0.9923367528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="COk-4Z-bpW" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="-213" id="MfM-Im-RhN"/>
+                            <constraint firstItem="COk-4Z-bpW" firstAttribute="centerY" secondItem="3se-qz-xqx" secondAttribute="centerY" id="XO9-W2-xSJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="verticalProgress" destination="YrQ-Tv-OKD" id="xLs-wb-5yK"/>
+                        <outlet property="verticalSlider" destination="COk-4Z-bpW" id="Gbt-jC-qFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="-182"/>
+        </scene>
+    </scenes>
+</document>

@@ -37,6 +37,12 @@ class GameViewController: UIViewController, MenuControllerDelegate {
         let input = "ics_100_32_neg1_a_slice"
         gadget_main_setup(strdup(input))
         gadget_main_run()    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gameToMenu"{
+            let vc = segue.destination
+            vc.delegate = self
+        }
+    }
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
@@ -112,6 +118,8 @@ class GameViewController: UIViewController, MenuControllerDelegate {
         skView.presentScene(scene)
         
     }
+    
+
     
     override var shouldAutorotate : Bool {
         return true

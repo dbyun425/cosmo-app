@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0D653A11E83451C0052719E /* Game_Controller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D653A01E83451C0052719E /* Game_Controller.storyboard */; };
 		E0F830741E6F46E600059ADE /* ics_100_32_neg1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */; };
 		E0F830751E6F46E600059ADE /* ics_100_32_neg2_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830681E6F46E600059ADE /* ics_100_32_neg2_a_slice */; };
 		E0F830761E6F46E600059ADE /* ics_100_32_plus1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830691E6F46E600059ADE /* ics_100_32_plus1_a_slice */; };
@@ -97,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0D653A01E83451C0052719E /* Game_Controller.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Game_Controller.storyboard; sourceTree = "<group>"; };
 		E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_neg1_a_slice; sourceTree = "<group>"; };
 		E0F830681E6F46E600059ADE /* ics_100_32_neg2_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_neg2_a_slice; sourceTree = "<group>"; };
 		E0F830691E6F46E600059ADE /* ics_100_32_plus1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_plus1_a_slice; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				E74548811B1E4BCC001D885B /* GameScene_old.swift */,
 				E74548831B1E4BCC001D885B /* GameViewController.swift */,
 				E0FA93521E78ED050072820F /* MenuController.swift */,
+				E0D653A01E83451C0052719E /* Game_Controller.storyboard */,
 				E74548881B1E4BCC001D885B /* Images.xcassets */,
 				E745488A1B1E4BCC001D885B /* LaunchScreen.xib */,
 				FE4C6DD01D3031F500C980BF /* MenuScene.sks */,
@@ -487,6 +490,7 @@
 				E0F830761E6F46E600059ADE /* ics_100_32_plus1_a_slice in Resources */,
 				E0F8307D1E6F46E600059ADE /* ics_100_64_plus1_a_slice in Resources */,
 				E7A11C191B22079B0056DF1C /* snapshot_001 in Resources */,
+				E0D653A11E83451C0052719E /* Game_Controller.storyboard in Resources */,
 				E74549031B1E4CFD001D885B /* outputs_lcdm_gas.txt in Resources */,
 				E7A11C1D1B22079B0056DF1C /* snapshot_005 in Resources */,
 				E0F8307E1E6F46E600059ADE /* ics_100_64_plus2_a_slice in Resources */,

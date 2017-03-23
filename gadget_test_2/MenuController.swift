@@ -8,14 +8,16 @@
 
 import UIKit
 
-protocol MenuControllerDelegate {
+protocol MenuControllerDelegate: class {
     func initCond1Pressed()
 }
 
 class MenuController: UIViewController {
-    var delegate: MenuControllerDelegate!
+    var delegate: MenuControllerDelegate? = nil
     @IBAction func initCond1(){
-        delegate.initCond1Pressed()
+        if (delegate != nil){
+            delegate!.initCond1Pressed()
+        }
     }
     
     override func viewDidLoad() {
