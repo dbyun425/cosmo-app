@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Initial Condition 1"/>
                                 <connections>
-                                    <action selector="initCond1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="CkX-uM-F3Q"/>
+                                    <action selector="initCond1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="WTY-Wr-o42"/>
                                     <action selector="initalCondition1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="0zT-M5-T8V"/>
                                 </connections>
                             </button>

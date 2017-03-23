@@ -14,12 +14,11 @@ protocol MenuControllerDelegate: class {
 
 class MenuController: UIViewController {
     var delegate: MenuControllerDelegate? = nil
-    @IBAction func initCond1(){
+    @IBAction func initCond1(_ sender: UIButton!){
         if (delegate != nil){
             delegate!.initCond1Pressed()
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

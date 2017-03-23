@@ -33,13 +33,13 @@ class GameViewController: UIViewController, MenuControllerDelegate {
         
         // Gadget ended, free memory
         //free_memory()
-        
         let input = "ics_100_32_neg1_a_slice"
         gadget_main_setup(strdup(input))
         gadget_main_run()    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if segue.identifier == "gameToMenu"{
-            let vc = segue.destination
+            let vc:MenuController = segue.destination as! MenuController
             vc.delegate = self
         }
     }
