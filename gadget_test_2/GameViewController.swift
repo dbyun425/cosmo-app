@@ -33,7 +33,8 @@ class GameViewController: UIViewController, MenuControllerDelegate {
         
         // Gadget ended, free memory
         //free_memory()
-        let input = "ics_100_32_neg1_a_slice"
+        
+        let input = "ics_100_32_plus1_a_slice"
         gadget_main_setup(strdup(input))
         gadget_main_run()    }
     

@@ -156,7 +156,6 @@ void find_timesteps(int mode)
  	  if(mode!=2)
 	    dt= TIMESTEP_INCREASE_FACTOR*dtold;
 	}
-      
       if(dt>= All.MaxSizeTimestep)
 	{
 	  dt= All.MaxSizeTimestep * (1.00 + 0.02*drand48());
