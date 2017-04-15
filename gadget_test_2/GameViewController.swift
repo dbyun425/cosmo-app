@@ -25,24 +25,18 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController, MenuControllerDelegate {
+class GameViewController: UIViewController {
     var semaphore: DispatchSemaphore
     
-    func initCond1Pressed() {
-        //let initString = "ics_32_neg1_a_slice"
-        
-        // Gadget ended, free memory
-        //free_memory()
-        
-        let input = "ics_100_32_plus1_a_slice"
-        gadget_main_setup(strdup(input))
-        gadget_main_run()    }
+    @IBOutlet weak var menu: UIButton!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if segue.identifier == "gameToMenu"{
-            let vc:MenuController = segue.destination as! MenuController
-            vc.delegate = self
-        }
+    @IBAction func actionBeforeUnwind(_ sender: Any) {
+            endrun(0)
+            free_memory()
+    }
+    
+    @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue)
+    {
     }
     
     @IBOutlet weak var verticalSlider: UISlider!{
@@ -83,7 +77,18 @@ class GameViewController: UIViewController, MenuControllerDelegate {
         let queue = DispatchQueue.global(qos: DispatchQoS.QoSClass.utility)
         
         queue.async(execute: { () -> Void in
-            let input = "ics_100_32_neg1_a_slice"
+            var input = ""
+            if (Gamestate.levelcode == 1)
+            {
+                input = "ics_100_32_neg1_a_slice"
+            }
+            else if (Gamestate.levelcode == 2)
+            {
+                input = "ics_100_32_plus1_a_slice"
+            }
+            else{
+                input = "ics_100_32_zero_a_slice"
+            }
             gadget_main_setup(strdup(input))
             
             // release semaphore

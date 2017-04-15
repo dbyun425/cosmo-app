@@ -47,7 +47,6 @@ void begrun(char* input)
     read_parameter_file(ParameterFile);   /* ... read in parameters for this run */
     
     set_sph_kernel();
-    
     set_units();
     
 #ifdef PERIODIC

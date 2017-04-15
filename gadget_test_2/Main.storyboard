@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5fu-Lr-dbl">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,13 +27,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Initial Condition 1"/>
                                 <connections>
-                                    <action selector="initCond1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="WTY-Wr-o42"/>
-                                    <action selector="initalCondition1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="0zT-M5-T8V"/>
+                                    <action selector="beforeStage1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="Eoz-Ro-X6e"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="lK6-bl-g7u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDs-uD-1cI">
+                                <rect key="frame" x="20" y="64" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Condition 2"/>
+                                <connections>
+                                    <action selector="beforeStage2:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="gmm-5d-etN"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="rOa-mV-mnV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="initCond1" destination="RIw-Rd-H9D" id="f02-M5-rI2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLA-Lv-w5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,9 +145,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
                                 <connections>
-                                    <segue destination="5fu-Lr-dbl" kind="popoverPresentation" identifier="gameToMenu" popoverAnchorView="oM8-k4-2QY" id="iC8-d8-are">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="actionBeforeUnwind:" destination="BV1-FR-VrT" eventType="touchUpInside" id="QPr-Ch-VjZ"/>
+                                    <segue destination="VP2-df-4fL" kind="unwind" unwindAction="unwindSegueWithUnwindSegue:" id="HIk-di-OyH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repulsive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggo-f8-S0d">
@@ -161,13 +172,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="menu" destination="oM8-k4-2QY" id="2p1-5J-iCJ"/>
                         <outlet property="verticalProgress" destination="YrQ-Tv-OKD" id="xLs-wb-5yK"/>
                         <outlet property="verticalSlider" destination="COk-4Z-bpW" id="Gbt-jC-qFx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <exit id="VP2-df-4fL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-498" y="-182"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rOa-mV-mnV"/>
+    </inferredMetricsTieBreakers>
 </document>

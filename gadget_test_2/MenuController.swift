@@ -8,17 +8,22 @@
 
 import UIKit
 
-protocol MenuControllerDelegate: class {
-    func initCond1Pressed()
-}
 
 class MenuController: UIViewController {
-    var delegate: MenuControllerDelegate? = nil
-    @IBAction func initCond1(_ sender: UIButton!){
-        if (delegate != nil){
-            delegate!.initCond1Pressed()
-        }
+    @IBOutlet weak var initCond1: UIButton!
+    
+    @IBAction func beforeStage1(_ sender: Any) {
+        Gamestate.levelcode = 1
     }
+    @IBAction func beforeStage2(_ sender: Any) {
+        Gamestate.levelcode = 2
+    }
+    
+    @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue)
+    {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
