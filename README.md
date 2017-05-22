@@ -7,6 +7,7 @@ TODO:
 4. Better UI
 5. Visible dark matter for debug (Wut)
 6. Timer/Speedup
+7. Gravity with spreading speed, max speed of particles (speedoflight)
 
 Later TODO:
 1. Tutorial
