@@ -224,7 +224,9 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
-        
+        if(playing == 0){
+            return;         //The return statement that saved us all. You can safely go back to the menu now.
+        }
         if(gamePause == 0) {
         
         // set positions
@@ -253,7 +255,7 @@ class GameScene: SKScene {
                 self.equivClass[n+1] = (n+1,false)
                 self.equivCount[n+1] = 1
             }
-            union_find()
+            //union_find()
             self.timeCounter = 0
             
             for y in 0 ..< self.chainMesh.count {
@@ -326,7 +328,7 @@ class GameScene: SKScene {
     }
     
     func union_find() {
-        let range = Float(0.5)
+        let range = Float(-1.0)
         var dist = Float(0)
         
         //if two particles are within certain distance of each other

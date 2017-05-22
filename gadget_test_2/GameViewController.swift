@@ -31,8 +31,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var menu: UIButton!
     
     @IBAction func actionBeforeUnwind(_ sender: Any) {
-            endrun(0)
-            free_memory()
+            playing = 0
     }
     
     @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue)
@@ -78,16 +77,24 @@ class GameViewController: UIViewController {
         
         queue.async(execute: { () -> Void in
             var input = ""
-            if (Gamestate.levelcode == 1)
+            switch(level)
             {
+            case(1):
                 input = "ics_100_32_neg1_a_slice"
-            }
-            else if (Gamestate.levelcode == 2)
-            {
+                break
+            case(2):
                 input = "ics_100_32_plus1_a_slice"
-            }
-            else{
+                break
+            case(3):
+                input = "ics_100_64_neg2_a_slice"
+                break
+            case(4):
+                input = "ics_100_64_plus3_a_slice"
+                break
+            default:
                 input = "ics_100_32_zero_a_slice"
+                break
+                
             }
             gadget_main_setup(strdup(input))
             

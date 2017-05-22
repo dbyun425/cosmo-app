@@ -97,6 +97,7 @@ int gamePause;
 
 //Choosing Levels
 int level;
+int playing;
 
 
 

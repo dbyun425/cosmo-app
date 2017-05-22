@@ -32,7 +32,7 @@ void allocate_memory(void)
         bytes_tot += bytes;
         
         
-        P = P_data-1;   /* start with offset 1 */
+        P = P_data-1;   /* start with offset 1 */       //BUT WHY?!!?!?!! Is indexing from 1 that important?
         PTimeTree--;
         
         printf("\nAllocated %g MByte for particle storage.\n\n",bytes_tot/(1024.0*1024.0));

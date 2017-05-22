@@ -55,7 +55,6 @@ int gadget_main_setup(char* input) {
     All.CPU_Predict= All.CPU_TimeLine= 0;
     
     CPUThisRun=0;
-    
     t0 = second();
     
     begrun(input);     /* set-up run  */

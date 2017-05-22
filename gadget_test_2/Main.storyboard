@@ -32,12 +32,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDs-uD-1cI">
-                                <rect key="frame" x="20" y="64" width="140" height="36"/>
+                                <rect key="frame" x="20" y="57" width="140" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Initial Condition 2"/>
                                 <connections>
                                     <action selector="beforeStage2:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="gmm-5d-etN"/>
                                     <segue destination="BV1-FR-VrT" kind="show" id="rOa-mV-mnV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-XS-166">
+                                <rect key="frame" x="20" y="132" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Condition 4"/>
+                                <connections>
+                                    <action selector="beforeStage4:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="qn6-Od-nXV"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="Num-vv-nPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koY-05-54d">
+                                <rect key="frame" x="20" y="95" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Condition 3"/>
+                                <connections>
+                                    <action selector="beforeStage3:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="q5a-Lp-3bQ"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="3XS-yu-CWF"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -13,12 +13,21 @@ class MenuController: UIViewController {
     @IBOutlet weak var initCond1: UIButton!
     
     @IBAction func beforeStage1(_ sender: Any) {
-        Gamestate.levelcode = 1
+        playing = 1
+        level = 1
     }
     @IBAction func beforeStage2(_ sender: Any) {
-        Gamestate.levelcode = 2
+        playing = 1
+        level = 2
     }
-    
+    @IBAction func beforeStage3(_ sender: Any) {
+        playing = 1
+        level = 3
+    }
+    @IBAction func beforeStage4(_ sender: Any) {
+        playing = 1
+        level = 4
+    }
     @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue)
     {
         
@@ -26,7 +35,7 @@ class MenuController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        playing = 0
         // Do any additional setup after loading the view.
     }
 

@@ -116,7 +116,8 @@ void init(void) {
     // MODIFICATION
     // initialize particle interaction parameters
     interaction = 0;
-    level = 1;
+    //level = 1;
+    playing = 1;
     interactionFactor = 1;
     touchLocation[0] = 0.0;
     touchLocation[1] = 0.0;

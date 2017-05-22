@@ -18,6 +18,7 @@
 
 
 
+
 /* This routine contains the main simulation loop that iterates over
  * the single timesteps. The loop terminates when the cpu-time
  * limit is reached, when a `stop' file is found in the output 
@@ -36,6 +37,11 @@ void run() {
 
 
     do {      /* main loop */
+        //if(!Gamestate.playing)
+        //    return;
+        if(!playing) {
+            return;     //Stop loop if not playing anymore.
+        }
         if(!gamePause) {
         t0=second();
 

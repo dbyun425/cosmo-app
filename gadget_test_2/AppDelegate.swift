@@ -8,12 +8,6 @@
 
 import UIKit
 
-struct Gamestate    //used for controlling current status of game
-{
-    static var levelcode = 0    //code number of level
-    static var playing = 1  // is game being played or not (for exiting back to menu screen)
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
