@@ -255,7 +255,7 @@ class GameScene: SKScene {
                 self.equivClass[n+1] = (n+1,false)
                 self.equivCount[n+1] = 1
             }
-            //union_find()
+            union_find()
             self.timeCounter = 0
             
             for y in 0 ..< self.chainMesh.count {
@@ -328,7 +328,7 @@ class GameScene: SKScene {
     }
     
     func union_find() {
-        let range = Float(-1.0)
+        let range = Float(1000)
         var dist = Float(0)
         
         //if two particles are within certain distance of each other
@@ -382,24 +382,27 @@ class GameScene: SKScene {
         
     }
     
+    
+    //Set color of particles according to number of particles in group,
+    //as opposed to INDEX OF PARTICLES LIKE SOME OTHER GUY DID - Doyee
     func setColor(_ node: SKSpriteNode, i: Int) {
         let (equivNum,classBool) = self.equivClass[i]
-        if (classBool && equivNum >= 15 && equivNum < 30) {
+        if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             node.color = self.classColors[3]
         }
-        else if (classBool && equivNum >= 30 && equivNum < 60) {
+        else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
             node.color = self.classColors[2]
         }
-        else if (classBool && equivNum >= 60 && equivNum < 100) {
+        else if (classBool && self.equivCount[equivNum] >= 60 && self.equivCount[equivNum] < 100) {
             node.color = self.classColors[1]
         }
-        else if (classBool && equivNum >= 100 && equivNum < 150) {
+        else if (classBool && self.equivCount[equivNum] >= 100 && self.equivCount[equivNum] < 150) {
             node.color = self.classColors[0]
         }
-        else if (classBool && equivNum >= 150 && equivNum < 250) {
+        else if (classBool && self.equivCount[equivNum] >= 150 && self.equivCount[equivNum] < 250) {
             node.color = self.classColors[4]
         }
-        else if (classBool && equivNum >= 250) {
+        else if (classBool && self.equivCount[equivNum] >= 250) {
             node.color = self.classColors[5]
         }
         else {
