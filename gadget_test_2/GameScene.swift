@@ -351,7 +351,7 @@ class GameScene: SKScene {
                                 let info = temp[k]
                                 let (x1,y1,_) = P[info].Pos
                                 let (equivNum2,_) = self.equivClass[info]
-                                dist = sqrt((x0-x1)*(x0-x1) + (y0-y1)*(y0-y1)) // Why does the distance become zero??
+                                dist = sqrt((x0-x1)*(x0-x1) + (y0-y1)*(y0-y1))
                                 if ((range - dist) >= 0.0) {
                                     self.equivClass[info] = (min(equivNum1,equivNum2),true)
                                 }
@@ -374,6 +374,7 @@ class GameScene: SKScene {
             } */
         }
         
+        //Counts number of particles in each group.
         for j in 0 ..< self.totalParticles {
             let (eqNum,_) = self.equivClass[j+1]
             self.equivCount[eqNum] += 1
