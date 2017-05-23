@@ -20,6 +20,11 @@
 #include "allvars.h"
 
 void modify_accel() {
+    
+    float maxvel = pow(10.0,9.0);
+    float softening = 500.0; // to avoid infinite acceleration
+    float bound = pow(10.0,5.0);
+    
     //for (int i = 1; i <= NumPart; i++) P[i].Vel[2] = 0;
     
     if (interaction == 0){
@@ -32,7 +37,7 @@ void modify_accel() {
     }
     
     // > 0 for attractive, < 0 for repulsive
-    float attractionFactor = 1000000000000.0 * interactionFactor;
+    float attractionFactor = 10000000000.0 * interactionFactor;
     accelerationFactor = attractionFactor;
     
     float touchX = touchLocation[0];
@@ -41,31 +46,41 @@ void modify_accel() {
     
     printf("touch: %f %f %f\n", touchX, touchY, touchZ);
     
+    float partX = 0;
+    float partY = 0;
+    
+    float deltaX = 0;
+    float deltaY = 0;
+    
+    float dist = 0;
+    
+    float accelMag = 0;
+    float accelX = 0;
+    float accelY = 0;
+    
     // update the acceleration for each particle
     // Note: particle indexing is [1, n] in origianl GADGET code for some weird reason
     for (int i = 1; i <= NumPart; i++) {
-        float partX = P[i].Pos[0];
-        float partY = P[i].Pos[1];
+        partX = P[i].Pos[0];
+        partY = P[i].Pos[1];
         //float partZ = P[i].Pos[2];
         
         // distance from touch to particle
-        float softening = 500.0; // to avoid infinite acceleration
-        float deltaX = (touchX - partX);
-        float deltaY = (touchY - partY);
+        
+        deltaX = (touchX - partX);
+        deltaY = (touchY - partY);
         //float deltaZ = (touchZ - partZ);
         //float dist = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ) + softening;
-        float dist = sqrt(deltaX * deltaX + deltaY * deltaY) + softening;
+        dist = sqrt(deltaX * deltaX + deltaY * deltaY) + softening;
         
-        float accelMag = attractionFactor / (dist * dist);
-        float accelX = accelMag * (deltaX / dist);
-        float accelY = accelMag * (deltaY / dist);
+        accelMag = attractionFactor / (dist * dist);
+        accelX = accelMag * (deltaX / dist);
+        accelY = accelMag * (deltaY / dist);
         //float accelZ = accelMag * (deltaZ / dist);
         
-        P[i].addedVel[0] += accelX;
-        P[i].addedVel[1] += accelY;
+        P[i].Vel[0] += accelX;
+        P[i].Vel[1] += accelY;
         
-        P[i].Pos[0] += P[i].addedVel[0] * 0.000001;
-        P[i].Pos[1] += P[i].addedVel[1] * 0.000001;
         P[i].Accel[2] = 0;
     }
     /*
