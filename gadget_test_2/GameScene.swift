@@ -232,6 +232,7 @@ class GameScene: SKScene {
         // set positions
         // MARK: MAKE SURE THAT THE IDIOT WHO INDEXED ARRAYS STARTING FROM 1
         //       KNOWS WHAT HE'S DOING
+        // Ray: Wut dafaq
         
         for i in 0 ..< self.totalParticles {
             let (xPos1, yPos1, zPos1) = P[i + 1].Pos // retrieve particle position from all particle data // <---- THIS PART
@@ -270,7 +271,7 @@ class GameScene: SKScene {
         if (interaction == 0) {
             self.touchTracker.fillColor = UIColor.clear
         }
-        else {
+        else { //On press/hold
             self.touchTracker.fillColor = UIColor.white
             let touchX = CGFloat(touchLocation.0)
             let touchY = CGFloat(touchLocation.1)
@@ -298,6 +299,8 @@ class GameScene: SKScene {
         //self.prevCells[i] = result.cell
         
         // test scaling and shifting
+        
+        //UPDATE: No necessary reason found for scaling
         var x1 = CGFloat(x) * self.zoomScale //CGFloat(result.pos.x) * self.zoomScale
         var y1 = CGFloat(y) * self.zoomScale //CGFloat(result.pos.y) * self.zoomScale
         let z1 = CGFloat(z) * self.zoomScale //CGFloat(result.pos.z) * self.zoomScale
@@ -309,7 +312,7 @@ class GameScene: SKScene {
     
     // cuboid inverse transform wrapper function
     func inverseTransform(_ pos: (x: CGFloat, y: CGFloat, z: CGFloat)) -> (CGFloat, CGFloat, CGFloat) {
-        // undo scaling and shifting
+        // undo scaling and shifting            Again, no need determined for scaling/shifting
         let scale = Double(self.zoomScale)
         var x1 = Double(pos.x - self.xShiftOffset)
         var y1 = Double(pos.y - self.yShiftOffset)
@@ -328,6 +331,7 @@ class GameScene: SKScene {
     }
     
     func union_find() {
+        /* Grouping Function using Union Find method */
         let range = Float(-1.0)
         var dist = Float(0)
         
@@ -403,7 +407,7 @@ class GameScene: SKScene {
             node.color = self.classColors[5]
         }
         else {
-            node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
+            node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0) //Default Particle Color
         }
     }
 
