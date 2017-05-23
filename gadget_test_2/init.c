@@ -125,6 +125,8 @@ void init(void) {
     accelerationFactor = 0.0;
     gamePause = 0;
     
+    pressedTime = 0.0;
+    
     
     All.NumForcesSinceLastTreeConstruction= All.TreeUpdateFrequency*All.TotNumPart ; /* ensures that new tree will be constructed */
     

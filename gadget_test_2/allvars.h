@@ -407,6 +407,8 @@ extern float interactionFactor; // +1: attract, -1: repel
 extern float touchLocation[3];
 extern float accelerationFactor;
 
+extern float pressedTime;
+
 extern char* ewaldPath; //for the file to be read in
 extern char* icsPath; //for the file to be read in
 

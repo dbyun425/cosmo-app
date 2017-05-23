@@ -53,7 +53,7 @@ void modify_accel(){
     float maxvel = pow(10.0,9.0);
 
     //Attractive/Repulsive is +/- respectively
-    float attractFactor = pow(10.0,10.0) * interactionFactor;
+    float attractFactor = pow(10.0,11.0) * interactionFactor;
     accelerationFactor = -attractFactor;
     
     //Touch coords
@@ -63,6 +63,7 @@ void modify_accel(){
     float softening = 500.0; // to avoid infinite acceleration
     float bound = pow(10.0,5.0); //Boundary of space (max)
     float halfbound = bound*.5;
+    float maxradius = bound/3.0; //Max radius of force tool
     
     //printf("touch: %f %f %f\n", touchX, touchY);
     
@@ -86,7 +87,11 @@ void modify_accel(){
             delY = (bound-fabsf(delY))*copysign(1.0,-delY);
         }
         
+        softening = sqrtf(delX*delX+delY*delY);
+        
         float dist = mod_dist(delX, delY, softening);
+        
+        //if(dist > maxradius) continue;
         
         //"Forces" from press
         float fpart = force_press(attractFactor, dist);

@@ -182,6 +182,7 @@ class GameScene: SKScene {
             //            println("touches began")
             interaction = 1
             self.updateTouchLocation(touches)
+            //pressedTime =
         }
     }
     
