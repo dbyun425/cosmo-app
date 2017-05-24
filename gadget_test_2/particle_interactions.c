@@ -24,6 +24,7 @@ void modify_accel() {
     float maxvel = pow(10.0,9.0);
     float softening = 500.0; // to avoid infinite acceleration
     float bound = pow(10.0,5.0);
+    float halfbound = bound *.5;
     
     //for (int i = 1; i <= NumPart; i++) P[i].Vel[2] = 0;
     
@@ -57,9 +58,13 @@ void modify_accel() {
     float accelMag = 0;
     float accelX = 0;
     float accelY = 0;
+    float velmag = 0;
+    float velX = 0;
+    float velY = 0;
     
     // update the acceleration for each particle
-    // Note: particle indexing is [1, n] in origianl GADGET code for some weird reason
+    // Note: particle indexing is [1, n] in original GADGET code for some weird reason
+    // oh Fortran
     for (int i = 1; i <= NumPart; i++) {
         partX = P[i].Pos[0];
         partY = P[i].Pos[1];
@@ -69,6 +74,12 @@ void modify_accel() {
         
         deltaX = (touchX - partX);
         deltaY = (touchY - partY);
+        if(fabsf(deltaX)>halfbound){
+            deltaX = (bound-fabsf(deltaX))*copysign(1.0,-deltaX);
+        }
+        if(fabsf(deltaY)>halfbound){
+            deltaY = (bound-fabsf(deltaY))*copysign(1.0,-deltaY);
+        }
         //float deltaZ = (touchZ - partZ);
         //float dist = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ) + softening;
         dist = sqrt(deltaX * deltaX + deltaY * deltaY) + softening;
@@ -78,8 +89,18 @@ void modify_accel() {
         accelY = accelMag * (deltaY / dist);
         //float accelZ = accelMag * (deltaZ / dist);
         
-        P[i].Vel[0] += accelX;
-        P[i].Vel[1] += accelY;
+        velX = P[i].Vel[0] += accelX;
+        velY = P[i].Vel[1] += accelY;
+        
+        velmag = sqrt(velX*velX + velY*velY);
+        
+        if(velmag>maxvel){
+            velX = maxvel*velX/velmag;
+            velY = maxvel*velY/velmag;
+        }
+        
+        P[i].Vel[0] = velX;
+        P[i].Vel[1] = velY;
         
         P[i].Accel[2] = 0;
     }
