@@ -123,6 +123,30 @@ void init(void) {
     touchLocation[1] = 0.0;
     touchLocation[2] = 0.0;
     accelerationFactor = 0.0;
+    
+    maxvel = pow(10.0,9.0);
+    softening = 500.0; // to avoid infinite acceleration
+    bound = pow(10.0,5.0);
+    halfbound = bound *.5;
+    
+    touchX = 0.0;
+    touchY = 0.0;
+    touchZ = 0.0;
+    
+    partX = 0;
+    partY = 0;
+    
+    deltaX = 0;
+    deltaY = 0;
+    
+    dist = 0;
+    
+    accelMag = 0;
+    accelX = 0;
+    accelY = 0;
+    velmag = 0;
+    velX = 0;
+    velY = 0;
     gamePause = 0;
     
     

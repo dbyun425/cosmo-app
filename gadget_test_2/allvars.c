@@ -88,6 +88,30 @@ float interactionFactor;
 float touchLocation[3];
 float accelerationFactor;
 
+float maxvel;
+float softening; // to avoid infinite acceleration
+float bound;
+float halfbound;
+
+float touchX;
+float touchY;
+float touchZ;
+
+float partX;
+float partY;
+
+float deltaX;
+float deltaY;
+
+float dist;
+
+float accelMag;
+float accelX;
+float accelY;
+float velmag;
+float velX;
+float velY;
+
 //Adding string for pathways
 char* ewaldPath;
 char* icsPath;

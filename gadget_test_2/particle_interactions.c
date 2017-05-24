@@ -21,10 +21,10 @@
 
 void modify_accel() {
     
-    float maxvel = pow(10.0,9.0);
+    /*float maxvel = pow(10.0,9.0);
     float softening = 500.0; // to avoid infinite acceleration
     float bound = pow(10.0,5.0);
-    float halfbound = bound *.5;
+    float halfbound = bound *.5;*/
     
     //for (int i = 1; i <= NumPart; i++) P[i].Vel[2] = 0;
     
@@ -38,29 +38,14 @@ void modify_accel() {
     }
     
     // > 0 for attractive, < 0 for repulsive
-    float attractionFactor = pow(10.0,12.0) * interactionFactor;
-    accelerationFactor = attractionFactor;
+    //float attractionFactor = pow(10.0,12.0) * interactionFactor;
+    accelerationFactor = pow(10.0,12.0) * interactionFactor;
     
-    float touchX = touchLocation[0];
-    float touchY = touchLocation[1];
-    float touchZ = touchLocation[2];
+    touchX = touchLocation[0];
+    touchY = touchLocation[1];
+    touchZ = touchLocation[2];
     
     printf("touch: %f %f %f\n", touchX, touchY, touchZ);
-    
-    float partX = 0;
-    float partY = 0;
-    
-    float deltaX = 0;
-    float deltaY = 0;
-    
-    float dist = 0;
-    
-    float accelMag = 0;
-    float accelX = 0;
-    float accelY = 0;
-    float velmag = 0;
-    float velX = 0;
-    float velY = 0;
     
     // update the acceleration for each particle
     // Note: particle indexing is [1, n] in original GADGET code for some weird reason
@@ -84,7 +69,7 @@ void modify_accel() {
         //float dist = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ) + softening;
         dist = sqrt(deltaX * deltaX + deltaY * deltaY) + softening;
         
-        accelMag = attractionFactor / (dist * dist);
+        accelMag = accelerationFactor / (dist * dist);
         accelX = accelMag * (deltaX / dist);
         accelY = accelMag * (deltaY / dist);
         //float accelZ = accelMag * (deltaZ / dist);

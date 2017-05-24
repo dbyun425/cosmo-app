@@ -407,6 +407,30 @@ extern float interactionFactor; // +1: attract, -1: repel
 extern float touchLocation[3];
 extern float accelerationFactor;
 
+extern float maxvel;
+extern float softening; // to avoid infinite acceleration
+extern float bound;
+extern float halfbound;
+
+extern float touchX;
+extern float touchY;
+extern float touchZ;
+
+extern float partX;
+extern float partY;
+
+extern float deltaX;
+extern float deltaY;
+
+extern float dist;
+
+extern float accelMag;
+extern float accelX;
+extern float accelY;
+extern float velmag;
+extern float velX;
+extern float velY;
+
 extern char* ewaldPath; //for the file to be read in
 extern char* icsPath; //for the file to be read in
 
