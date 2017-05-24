@@ -33,6 +33,7 @@ void allocate_memory(void)
         
         
         P = P_data-1;   /* start with offset 1 */       //BUT WHY?!!?!?!! Is indexing from 1 that important?
+                                                        //Too late to go back now. The entire simulation depends on 1-indexing
         PTimeTree--;
         
         printf("\nAllocated %g MByte for particle storage.\n\n",bytes_tot/(1024.0*1024.0));
