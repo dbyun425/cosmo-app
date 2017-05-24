@@ -328,7 +328,7 @@ class GameScene: SKScene {
     }
     
     func union_find() {
-        let range = Float(2000)
+        let range = Float(100000)
         var dist = Float(0)
         
         //if two particles are within certain distance of each other

@@ -38,7 +38,7 @@ void modify_accel() {
     }
     
     // > 0 for attractive, < 0 for repulsive
-    float attractionFactor = 10000000000.0 * interactionFactor;
+    float attractionFactor = pow(10.0,12.0) * interactionFactor;
     accelerationFactor = attractionFactor;
     
     float touchX = touchLocation[0];
@@ -89,8 +89,12 @@ void modify_accel() {
         accelY = accelMag * (deltaY / dist);
         //float accelZ = accelMag * (deltaZ / dist);
         
-        velX = P[i].Vel[0] += accelX;
-        velY = P[i].Vel[1] += accelY;
+        //velX = P[i].Vel[0] + accelX;
+        //velY = P[i].Vel[1] + accelY;
+        
+        velX = P[i].addedVel[0] += accelX;
+        velY = P[i].addedVel[1] += accelY;
+        
         
         velmag = sqrt(velX*velX + velY*velY);
         
@@ -99,11 +103,14 @@ void modify_accel() {
             velY = maxvel*velY/velmag;
         }
         
-        P[i].Vel[0] = velX;
-        P[i].Vel[1] = velY;
+        P[i].addedVel[0] = velX;
+        P[i].addedVel[1] = velY;
         
+        P[i].Pos[0] += P[i].addedVel[0] * 0.000001;
+        P[i].Pos[1] += P[i].addedVel[1] * 0.000001;
         P[i].Accel[2] = 0;
-    }
+        
+}
     /*
      } else {
     
