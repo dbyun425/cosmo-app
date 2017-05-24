@@ -28,6 +28,14 @@ class MenuController: UIViewController {
         playing = 1
         level = 4
     }
+    @IBAction func beforeStage5(_ sender: Any) {
+        playing = 1
+        level = 5
+    }
+    @IBAction func beforeStage6(_ sender: Any) {
+        playing = 1
+        level = 6
+    }
     @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue)
     {
         

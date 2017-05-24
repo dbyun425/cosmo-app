@@ -91,8 +91,11 @@ class GameViewController: UIViewController {
             case(4):
                 input = "ics_100_64_plus3_a_slice"
                 break
+            case(5):
+                input = "ics_100_128_a_slice"
+                break
             default:
-                input = "ics_100_32_zero_a_slice"
+                input = "ics_100_64_a3_slice"
                 break
                 
             }

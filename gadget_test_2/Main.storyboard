@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5fu-Lr-dbl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5fu-Lr-dbl">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4128" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,6 +49,15 @@
                                     <segue destination="BV1-FR-VrT" kind="show" id="Num-vv-nPz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPy-Zs-JQF">
+                                <rect key="frame" x="20" y="171" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Condition 5"/>
+                                <connections>
+                                    <action selector="beforeStage5:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="Ueh-1D-5PP"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="jLe-ug-rCg"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koY-05-54d">
                                 <rect key="frame" x="20" y="95" width="140" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,6 +65,16 @@
                                 <connections>
                                     <action selector="beforeStage3:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="q5a-Lp-3bQ"/>
                                     <segue destination="BV1-FR-VrT" kind="show" id="3XS-yu-CWF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMW-WE-QNe">
+                                <rect key="frame" x="20" y="215" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Condition 6"/>
+                                <connections>
+                                    <action selector="beforeStage5:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="BxE-bn-7g8"/>
+                                    <action selector="beforeStage6:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="OvH-tn-WmP"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="DJb-Tl-mpd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,19 +100,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-jd-ddL">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7cj-jd-ddL">
                                 <rect key="frame" x="20" y="674" width="623" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7cj-jd-ddL" secondAttribute="height" multiplier="911:30" id="20q-RG-sXP"/>
                                 </constraints>
                             </stackView>
-                            <progressView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-Tv-OKD">
+                            <progressView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrQ-Tv-OKD">
                                 <rect key="frame" x="55" y="729" width="911" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="901" id="NT9-lv-nFo"/>
                                 </constraints>
                             </progressView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-K5-em4">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aZ5-K5-em4">
                                 <rect key="frame" x="-191" y="441" width="1519" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-ue-Ysf">
