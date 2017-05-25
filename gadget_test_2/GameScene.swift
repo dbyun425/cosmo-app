@@ -281,7 +281,16 @@ class GameScene: SKScene {
         
         // update acceleration label
         self.accelLabel.text = "\(accelerationFactor)"
-        self.galaxyCounter.text = "Num"
+        scoreCounter = 0
+        for i in 0..<self.totalParticles
+        {
+            let (eqNumSc,_) = self.equivClass[i+1]
+            if (self.equivCount[eqNumSc]>15){
+                //scoreCounter = scoreCounter + Int32(sqrt(Double(self.equivCount[eqNumSc])))
+                scoreCounter = scoreCounter + 1
+            }
+        }
+        self.galaxyCounter.text = "\(scoreCounter)"
         }
     }
     
