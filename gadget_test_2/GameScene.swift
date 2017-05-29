@@ -220,6 +220,7 @@ class GameScene: SKScene {
         // stop particle interaction
         //        println("touches ended")
         interaction = 0;
+        P[1].Mass = 0;
     }
     
     override func update(_ currentTime: TimeInterval) {

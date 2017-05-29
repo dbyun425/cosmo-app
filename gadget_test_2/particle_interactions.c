@@ -32,7 +32,7 @@ void modify_accel() {
     }
     
     // > 0 for attractive, < 0 for repulsive
-    float attractionFactor = 10000.0 * interactionFactor;
+    float attractionFactor = 1000000.0 * interactionFactor;
     accelerationFactor = attractionFactor;
     
     float touchX = touchLocation[0];

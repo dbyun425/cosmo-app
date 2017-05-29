@@ -67,6 +67,7 @@ void init(void) {
     
     All.TimeLastStatistics= All.TimeBegin-All.TimeBetStatistics;
     
+    P[1].Mass = 0;
     
     for(i=1; i<=NumPart; i++) /*  start-up initialization */
     {
