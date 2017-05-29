@@ -331,7 +331,7 @@ class Cuboid {
             }
         }
         
-        print("error: point \((x, y, z)) not contained in any cell")
+        //print("error: point \((x, y, z)) not contained in any cell")
         return ((x, y, z), 0) // dummy return value to keep the compiler happy
     }
     

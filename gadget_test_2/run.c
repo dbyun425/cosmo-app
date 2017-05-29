@@ -184,13 +184,13 @@ void every_timestep_stuff(void)
     {
       z=1/All.Time-1;
 //      fprintf(stdout,"\nBegin Timestep %d, Time: %g, Redshift: %g, Timestep: %g\n",All.NumCurrentTiStep,All.Time,z,All.TimeStep);
-      printf(        "\nBegin Timestep %d, Time: %g, Redshift: %g, Timestep: %g\n",All.NumCurrentTiStep,All.Time,z,All.TimeStep);
+      //printf(        "\nBegin Timestep %d, Time: %g, Redshift: %g, Timestep: %g\n",All.NumCurrentTiStep,All.Time,z,All.TimeStep);
       fflush(stdout);
     }
   else
     {
 //      fprintf(stdout,"\nBegin Timestep %d, Time: %g, Timestep: %g\n",All.NumCurrentTiStep,All.Time,All.TimeStep);
-      printf(        "\nBegin Timestep %d, Time: %g, Timestep: %g\n",All.NumCurrentTiStep,All.Time,All.TimeStep);
+      //printf(        "\nBegin Timestep %d, Time: %g, Timestep: %g\n",All.NumCurrentTiStep,All.Time,All.TimeStep);
       fflush(stdout);
     }
 

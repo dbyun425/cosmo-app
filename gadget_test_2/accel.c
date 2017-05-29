@@ -19,7 +19,7 @@
 void compute_accelerations(int mode) {
     double tstart, tend;
     
-    printf("Start force computation...\n");
+    //printf("Start force computation...\n");
     
     
     tstart=second();   /* measure the time for the full force computation */
@@ -48,7 +48,7 @@ void compute_accelerations(int mode) {
         All.CPU_Hydro+= timediff(tstart,tend);
     }
     
-    printf("done force.\n"); fflush(stdout);
+    //printf("done force.\n"); fflush(stdout);
 }
 
 

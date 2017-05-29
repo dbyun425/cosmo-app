@@ -22,11 +22,11 @@ void savepositions(int num)
     
     t0=second();
     
-    printf("\nwriting snapshot file... \n");
+    //printf("\nwriting snapshot file... \n");
     
     //savepositions_ioformat1(num);
     
-    printf("done with snapshot.\n");
+    //printf("done with snapshot.\n");
     
     t1=second();
     
