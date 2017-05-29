@@ -386,7 +386,10 @@ class GameScene: SKScene {
     //as opposed to INDEX OF PARTICLES LIKE SOME OTHER GUY DID - Doyee
     func setColor(_ node: SKSpriteNode, i: Int) {
         let (equivNum,classBool) = self.equivClass[i]
-        if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
+        if (i == 1) {
+            node.color = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        }
+        else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             node.color = self.classColors[3]
         }
         else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
