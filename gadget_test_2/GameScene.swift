@@ -233,7 +233,7 @@ class GameScene: SKScene {
         // set positions
         // MARK: MAKE SURE THAT THE IDIOT WHO INDEXED ARRAYS STARTING FROM 1
         //       KNOWS WHAT HE'S DOING
-        
+        scoreCounter = 0
         for i in 0 ..< self.totalParticles {
             let (xPos1, yPos1, zPos1) = P[i + 1].Pos // retrieve particle position from all particle data // <---- THIS PART
             var xPos = CGFloat(xPos1)
@@ -282,7 +282,7 @@ class GameScene: SKScene {
         
         // update acceleration label
         self.accelLabel.text = "\(accelerationFactor)"
-        self.galaxyCounter.text = "Num"
+        self.galaxyCounter.text = "\(scoreCounter)"
         }
     }
     
@@ -388,30 +388,35 @@ class GameScene: SKScene {
     func setColor(_ node: SKSpriteNode, i: Int) {
         let (equivNum,classBool) = self.equivClass[i]
         if (i == 1) {
-            node.color = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+            node.color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             node.color = self.classColors[3]
+            scoreCounter = scoreCounter + 1
         }
         else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
             node.color = self.classColors[2]
+            scoreCounter = scoreCounter + 2
         }
         else if (classBool && self.equivCount[equivNum] >= 60 && self.equivCount[equivNum] < 100) {
             node.color = self.classColors[1]
+            scoreCounter = scoreCounter + 3
         }
         else if (classBool && self.equivCount[equivNum] >= 100 && self.equivCount[equivNum] < 150) {
             node.color = self.classColors[0]
+            scoreCounter = scoreCounter + 4
         }
         else if (classBool && self.equivCount[equivNum] >= 150 && self.equivCount[equivNum] < 250) {
             node.color = self.classColors[4]
+            scoreCounter = scoreCounter + 5
         }
         else if (classBool && self.equivCount[equivNum] >= 250) {
             node.color = self.classColors[5]
+            scoreCounter = scoreCounter + 6
         }
         else {
             node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
         }
     }
-
     
 }

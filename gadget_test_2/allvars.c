@@ -99,6 +99,7 @@ int gamePause;
 int level;
 int playing;
 
-
+//Score calculation
+int scoreCounter;
 
 
