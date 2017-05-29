@@ -32,15 +32,18 @@ void modify_accel() {
     }
     
     // > 0 for attractive, < 0 for repulsive
-    float attractionFactor = 1000000000000.0 * interactionFactor;
+    float attractionFactor = 10000.0 * interactionFactor;
     accelerationFactor = attractionFactor;
     
     float touchX = touchLocation[0];
     float touchY = touchLocation[1];
     float touchZ = touchLocation[2];
+    P[1].Pos[0] = touchX;
+    P[1].Pos[1] = touchY;
+    P[1].Mass = attractionFactor;
     
-    printf("touch: %f %f %f\n", touchX, touchY, touchZ);
-    
+    //printf("touch: %f %f %f\n", touchX, touchY, touchZ);
+    /*
     // update the acceleration for each particle
     // Note: particle indexing is [1, n] in origianl GADGET code for some weird reason
     for (int i = 1; i <= NumPart; i++) {
@@ -68,6 +71,7 @@ void modify_accel() {
         P[i].Pos[1] += P[i].addedVel[1] * 0.000001;
         P[i].Accel[2] = 0;
     }
+    */
     /*
      } else {
     
