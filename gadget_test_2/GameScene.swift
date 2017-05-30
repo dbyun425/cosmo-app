@@ -12,6 +12,9 @@
 
 import Foundation
 import SpriteKit
+import AVFoundation
+
+var audioPlayer: AVAudioPlayer?
 
 class GameScene: SKScene {
     
@@ -29,7 +32,7 @@ class GameScene: SKScene {
     
     var chainMesh: [[[Int]]]
     var cellSize: Int = 500
-    
+
     //colors were retrieved from the following website http://cloford.com/resources/colours/500col.htm
     var classColors: [UIColor] = [
         UIColor(red: 255.0/255.0, green: 215.0/255.0, blue: 0.0, alpha: 1.0), //gold1
