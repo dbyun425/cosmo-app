@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gadget_test_2/GameScene.swift"
-            timestampString = "517784286.520653"
+            timestampString = "517869962.318562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
             landmarkName = "union_find()"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,13 +104,121 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "gadget_test_2/GameScene.swift"
-            timestampString = "517784286.520653"
+            timestampString = "517869962.318562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "union_find()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gadget_test_2/GameScene.swift"
+            timestampString = "517869825.816437"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gadget_test_2/GameScene.swift"
+            timestampString = "517869827.434984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_F233A50EA3E5EBB3EBE3DC342B020428_func2"
+                  moduleName = "gadget_test_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyee/Documents/Research_App/gadget_test_2/gadget_test_2/GameScene.swift"
+                  timestampString = "517869832.463076"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gadget_test_2.url.unsafeMutableAddressor : Foundation.URL"
+                  moduleName = "gadget_test_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyee/Documents/Research_App/gadget_test_2/gadget_test_2/GameScene.swift"
+                  timestampString = "517869832.55467"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "gadget_test_2/GameScene.swift"
+            timestampString = "517869845.00472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "GameScene"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gadget_test_2.GameScene.points.getter : Swift.Array&lt;__ObjC.SKSpriteNode&gt;"
+                  moduleName = "gadget_test_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyee/Documents/Research_App/gadget_test_2/gadget_test_2/GameScene.swift"
+                  timestampString = "517869854.385194"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gadget_test_2.GameScene.points.setter : Swift.Array&lt;__ObjC.SKSpriteNode&gt;"
+                  moduleName = "gadget_test_2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyee/Documents/Research_App/gadget_test_2/gadget_test_2/GameScene.swift"
+                  timestampString = "517869854.389491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

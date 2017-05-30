@@ -14,7 +14,11 @@ import Foundation
 import SpriteKit
 import AVFoundation
 
-var audioPlayer: AVAudioPlayer?
+var audioPlayer: AVAudioPlayer!
+
+let path = Bundle.main.path(forResource: "Sounds/254031__jagadamba__space-sound", ofType:"wav")!
+let url = URL(fileURLWithPath: path)
+
 
 class GameScene: SKScene {
     
@@ -63,6 +67,8 @@ class GameScene: SKScene {
     var zoomScale: CGFloat
     
     override init(size: CGSize) {
+        let sound = try! AVAudioPlayer(contentsOf: url)
+        audioPlayer = sound
         // initialize
         self.points = []
         self.totalParticles = Int(All.TotNumPart)
@@ -396,6 +402,7 @@ class GameScene: SKScene {
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             node.color = self.classColors[3]
             scoreCounter = scoreCounter + 1
+            audioPlayer.play()
         }
         else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
             node.color = self.classColors[2]
