@@ -69,6 +69,7 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         let sound = try! AVAudioPlayer(contentsOf: url)
         audioPlayer = sound
+        clusterLevel = 0;
         // initialize
         self.points = []
         self.totalParticles = Int(All.TotNumPart)
@@ -190,6 +191,8 @@ class GameScene: SKScene {
             // start particle interaction
             //            println("touches began")
             interaction = 1
+            accelerationFactor = 1000000.0 * interactionFactor;
+            P[1].Mass = accelerationFactor;
             self.updateTouchLocation(touches)
         }
     }
@@ -402,27 +405,56 @@ class GameScene: SKScene {
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             node.color = self.classColors[3]
             scoreCounter = scoreCounter + 1
-            audioPlayer.play()
+            if (clusterLevel < 1)
+            {
+                clusterLevel = 1;
+                audioPlayer.play();
+            }
         }
         else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
             node.color = self.classColors[2]
             scoreCounter = scoreCounter + 2
+            if (clusterLevel < 2)
+            {
+                clusterLevel = 2;
+                audioPlayer.play();
+            }
         }
         else if (classBool && self.equivCount[equivNum] >= 60 && self.equivCount[equivNum] < 100) {
             node.color = self.classColors[1]
             scoreCounter = scoreCounter + 3
+            if (clusterLevel < 3)
+            {
+                clusterLevel = 3;
+                audioPlayer.play();
+            }
         }
         else if (classBool && self.equivCount[equivNum] >= 100 && self.equivCount[equivNum] < 150) {
             node.color = self.classColors[0]
             scoreCounter = scoreCounter + 4
+            if (clusterLevel < 4)
+            {
+                clusterLevel = 4;
+                audioPlayer.play();
+            }
         }
         else if (classBool && self.equivCount[equivNum] >= 150 && self.equivCount[equivNum] < 250) {
             node.color = self.classColors[4]
             scoreCounter = scoreCounter + 5
+            if (clusterLevel < 5)
+            {
+                clusterLevel = 5;
+                audioPlayer.play();
+            }
         }
         else if (classBool && self.equivCount[equivNum] >= 250) {
             node.color = self.classColors[5]
             scoreCounter = scoreCounter + 6
+            if (clusterLevel < 6)
+            {
+                clusterLevel = 6;
+                audioPlayer.play();
+            }
         }
         else {
             node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)

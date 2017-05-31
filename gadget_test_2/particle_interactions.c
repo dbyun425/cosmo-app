@@ -23,24 +23,25 @@ void modify_accel() {
     //for (int i = 1; i <= NumPart; i++) P[i].Vel[2] = 0;
     
     if (interaction == 0){
+        /*
         for(int i = 1; i <= NumPart; i++) {
             P[i].addedVel[0] = P[i].Vel[0];
             P[i].addedVel[1] = P[i].Vel[1];
         }
+         */
         // no current interactions
         return;
     }
     
     // > 0 for attractive, < 0 for repulsive
-    float attractionFactor = 1000000.0 * interactionFactor;
-    accelerationFactor = attractionFactor;
+    //float attractionFactor = 1000000.0 * interactionFactor;
     
     float touchX = touchLocation[0];
     float touchY = touchLocation[1];
-    float touchZ = touchLocation[2];
+    //float touchZ = touchLocation[2];
     P[1].Pos[0] = touchX;
     P[1].Pos[1] = touchY;
-    P[1].Mass = attractionFactor;
+    //P[1].Mass = attractionFactor;
     
     //printf("touch: %f %f %f\n", touchX, touchY, touchZ);
     /*

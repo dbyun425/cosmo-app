@@ -102,4 +102,4 @@ int playing;
 //Score calculation
 int scoreCounter;
 
-
+int clusterLevel;

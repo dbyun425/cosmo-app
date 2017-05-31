@@ -417,3 +417,5 @@ extern int level; //when you choose a level, use this when having to assign spec
 extern int playing; //for determining whether player is in-game or not. Used to go back and forth between game and menu screens
 
 extern int scoreCounter; //for calculating score
+
+extern int clusterLevel;
