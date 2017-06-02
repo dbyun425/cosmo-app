@@ -84,6 +84,8 @@ class GameScene: SKScene {
         for i in 0 ..< self.totalParticles {
             self.equivClass[i+1] = (i + 1,false)
         }
+        P[1].Vel=(0,0,0)
+        P[1].VelPred=(0,0,0);
         self.timeCounter = 0
         
         // initialize scaling parameters
@@ -233,6 +235,9 @@ class GameScene: SKScene {
         //        println("touches ended")
         interaction = 0;
         P[1].Mass = 0;
+        P[1].Vel=(0,0,0);
+        P[1].VelPred=(0,0,0);
+        P[1].Accel = (0,0,0);
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -261,7 +266,7 @@ class GameScene: SKScene {
             self.setColor(thisPoint, i: i + 1)
         }
         
-        if (self.timeCounter == 100) {
+        //if (self.timeCounter == 100) {
             for n in 0..<self.totalParticles {
                 let (x,y,_) = P[n+1].Pos
                 self.chainMesh[(Int(x)%Int(All.BoxSize))/self.cellSize][(Int(y)%Int(All.BoxSize))/self.cellSize].append(n+1)
@@ -269,15 +274,15 @@ class GameScene: SKScene {
                 self.equivCount[n+1] = 1
             }
             union_find()
-            self.timeCounter = 0
+        //    self.timeCounter = 0
             
             for y in 0 ..< self.chainMesh.count {
                 for z in 0 ..< self.chainMesh.count {
                     self.chainMesh[y][z] = [Int]();
                 }
             }
-        }
-        self.timeCounter += 1
+        //}
+        //self.timeCounter += 1
         
         // update touch tracker for particle interactions
         if (interaction == 0) {
@@ -400,7 +405,7 @@ class GameScene: SKScene {
     func setColor(_ node: SKSpriteNode, i: Int) {
         let (equivNum,classBool) = self.equivClass[i]
         if (i == 1) {
-            node.color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            node.color = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         }
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             node.color = self.classColors[3]
