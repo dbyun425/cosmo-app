@@ -40,12 +40,12 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var verticalSlider: UISlider!{
         didSet{
-            verticalSlider.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2));   }
+            verticalSlider.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2));   }
     }
     
     @IBOutlet weak var verticalProgress: UIProgressView!{
         didSet{
-            verticalProgress.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+            verticalProgress.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
         }
     }
     
