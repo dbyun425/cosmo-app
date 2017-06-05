@@ -18,7 +18,7 @@ var audioPlayer: AVAudioPlayer!
 
 let path = Bundle.main.path(forResource: "Sounds/254031__jagadamba__space-sound", ofType:"wav")!
 let url = URL(fileURLWithPath: path)
-
+var initTime = Date().timeIntervalSinceReferenceDate
 
 class GameScene: SKScene {
     
@@ -73,7 +73,7 @@ class GameScene: SKScene {
         // initialize
         self.points = []
         self.totalParticles = Int(All.TotNumPart)
-        
+        initTime = Date().timeIntervalSinceReferenceDate
         // initialize cuboid transform parameters (choose one)
         //self.C = Cuboid(u1: (1,0,0), u2: (0,1,0), u3: (0,0,1))
         //self.C = Cuboid(u1: (3, 2, 1), u2: (-1, 1, 2), u3: (1, 1, 1)) // 32 cells
@@ -298,7 +298,7 @@ class GameScene: SKScene {
         }
         
         // update acceleration label
-        self.accelLabel.text = "\(accelerationFactor)"
+        self.accelLabel.text = "\((Int)(Date().timeIntervalSinceReferenceDate-initTime))"
         self.galaxyCounter.text = "\(scoreCounter)"
         }
     }
