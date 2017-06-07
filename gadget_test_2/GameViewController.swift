@@ -70,7 +70,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setToolbarHidden(true, animated: true)
         
         // start Gadget on background thread
         let queue = DispatchQueue.global(qos: DispatchQoS.QoSClass.utility)

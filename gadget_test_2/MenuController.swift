@@ -28,9 +28,19 @@ class MenuController: UIViewController {
         playing = 1
         level = 4
     }
+    
+    @IBAction func getout(_ sender: UIBarButtonItem) {
+        print("pls")
+    }
+    
     @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue)
     {
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillAppear(animated)
     }
     
     override func viewDidLoad() {
