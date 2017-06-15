@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cD-Xj-Mek">
-                                <rect key="frame" x="6" y="8" width="384" height="122"/>
+                                <rect key="frame" x="6" y="8" width="789" height="325"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -154,8 +154,18 @@
 5000 Forbes Ave. Pittsburgh, PA 15213
 
 Professor Rupert Croft
-Doyee Byun
-Ray Ye</string>
+
+Research Assistants
+-Doyee Byun
+-Ray Ye
+-Peter Lee
+-Luka Jelenak
+
+Sound sources
+-"Space Sound" by Jagadamba: https://www.freesound.org/people/Jagadamba/sounds/254031/
+ Licensed under Attribution Non-Commercial License: https://creativecommons.org/licenses/by-nc/3.0/
+-"DST-PhaserSwitch" from nosoapradio.us
+  Licensed under Attribution 3.0 Unported License</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

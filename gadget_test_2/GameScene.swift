@@ -18,6 +18,10 @@ var audioPlayer: AVAudioPlayer!
 
 let path = Bundle.main.path(forResource: "Sounds/254031__jagadamba__space-sound", ofType:"wav")!
 let url = URL(fileURLWithPath: path)
+
+var musicPlayer: AVAudioPlayer!
+let musicPath = Bundle.main.path(forResource: "Sounds/DST-PhaserSwitch", ofType:"mp3")!
+let musicUrl = URL(fileURLWithPath: musicPath)
 var initTime = Date().timeIntervalSinceReferenceDate
 
 class GameScene: SKScene {
@@ -69,6 +73,10 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         let sound = try! AVAudioPlayer(contentsOf: url)
         audioPlayer = sound
+        let music = try! AVAudioPlayer(contentsOf: musicUrl)
+        musicPlayer = music
+        music.play();
+        music.numberOfLoops = -1
         clusterLevel = 0;
         // initialize
         self.points = []
@@ -346,7 +354,7 @@ class GameScene: SKScene {
     }
     
     func union_find() {
-        let range = Float(1000000)
+        let range = Float(10000000)
         var dist = Float(0)
         
         //if two particles are within certain distance of each other

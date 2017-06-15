@@ -31,6 +31,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var menu: UIButton!
     
     @IBAction func actionBeforeUnwind(_ sender: Any) {
+            musicPlayer.stop()
             playing = 0
     }
     
@@ -90,7 +91,7 @@ class GameViewController: UIViewController {
                 input = "ics_100_64_neg2_a_slice"
                 break
             case(4):
-                input = "ics_100_64_plus3_a_slice"
+                input = "ics_ring_test"
                 break
             default:
                 input = "ics_100_32_zero_a_slice"
