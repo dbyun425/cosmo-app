@@ -27,6 +27,8 @@ var initTime = Date().timeIntervalSinceReferenceDate
 class GameScene: SKScene {
     
     var points: [SKSpriteNode] // marks the location of particles
+    var galaxySprite: [SKSpriteNode]
+    var galaxySizes: [CGSize]
     var totalParticles: Int
     
     var equivClass: [(Int,Bool)] // will be used for equivalence class and galaxy pairings
@@ -80,6 +82,8 @@ class GameScene: SKScene {
         clusterLevel = 0;
         // initialize
         self.points = []
+        self.galaxySprite = []
+        self.galaxySizes = []
         self.totalParticles = Int(All.TotNumPart)
         initTime = Date().timeIntervalSinceReferenceDate
         // initialize cuboid transform parameters (choose one)
@@ -126,12 +130,24 @@ class GameScene: SKScene {
         self.addChild(self.accelLabel)
         self.addChild(self.galaxyCounter)
         
-        //add points
+        //add points and galaxy
         let pointSize = CGSize(width: 2.0, height: 2.0)
+        let galaxySize = CGSize(width: 60.0, height: 50.0)
+        let gSize2 = CGSize(width: 120.0, height: 100.0)
+        let gSize3 = CGSize(width: 180.0, height: 150.0)
+        let gSize4 = CGSize(width: 240.0, height: 200.0)
+        let gSize5 = CGSize(width: 300.0, height: 250.0)
+        let gSize6 = CGSize(width: 360.0, height: 300.0)
+        galaxySizes = [galaxySize,gSize2,gSize3,gSize4,gSize5,gSize6]
         for _ in 0 ..< self.totalParticles {
             let thisPoint = SKSpriteNode(color: UIColor.cyan, size: pointSize)
             self.points.append(thisPoint)
             self.addChild(thisPoint)
+            let thisGalaxy = SKSpriteNode(imageNamed: "galaxytest.png")
+            thisGalaxy.size = galaxySize
+            self.galaxySprite.append(thisGalaxy)
+            self.addChild(thisGalaxy)
+            thisGalaxy.isHidden = true
         }
     }
     
@@ -269,9 +285,10 @@ class GameScene: SKScene {
             (xPos, yPos, zPos) = self.transform((xPos, yPos, zPos), index: i)
             
             let thisPoint = self.points[i]
+            let thisGalaxy = self.galaxySprite[i]
             thisPoint.position = CGPoint(x: xPos, y: yPos)
             thisPoint.zPosition = zPos
-            self.setColor(thisPoint, i: i + 1)
+            self.setColor(thisPoint, i: i + 1, thisGalaxy)
         }
         
         //if (self.timeCounter == 100) {
@@ -410,13 +427,25 @@ class GameScene: SKScene {
     
     //Set color of particles according to number of particles in group,
     //as opposed to INDEX OF PARTICLES LIKE SOME OTHER GUY DID - Doyee
-    func setColor(_ node: SKSpriteNode, i: Int) {
+    func setColor(_ node: SKSpriteNode, i: Int, _ galaxy: SKSpriteNode) {
         let (equivNum,classBool) = self.equivClass[i]
+        let black = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         if (i == 1) {
-            node.color = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+            node.color = black
         }
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
-            node.color = self.classColors[3]
+            if (equivNum == i)
+            {
+                galaxy.position = node.position
+                galaxy.zPosition = node.zPosition + 1.0
+                galaxy.size = galaxySizes[0]
+                galaxy.isHidden = false
+            }
+            else{
+                galaxy.isHidden = true
+            }
+            //node.color = self.classColors[3]
+            node.color = black
             scoreCounter = scoreCounter + 1
             if (clusterLevel < 1)
             {
@@ -425,7 +454,18 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
-            node.color = self.classColors[2]
+            if (equivNum == i)
+            {
+                galaxy.position = node.position
+                galaxy.zPosition = node.zPosition + 1.0
+                galaxy.size = galaxySizes[1]
+                galaxy.isHidden = false
+            }
+            else{
+                galaxy.isHidden = true
+            }
+            //node.color = self.classColors[2]
+            node.color = black
             scoreCounter = scoreCounter + 2
             if (clusterLevel < 2)
             {
@@ -434,7 +474,18 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 60 && self.equivCount[equivNum] < 100) {
-            node.color = self.classColors[1]
+            if (equivNum == i)
+            {
+                galaxy.position = node.position
+                galaxy.zPosition = node.zPosition + 1.0
+                galaxy.size = galaxySizes[2]
+                galaxy.isHidden = false
+            }
+            else{
+                galaxy.isHidden = true
+            }
+            //node.color = self.classColors[1]
+            node.color = black
             scoreCounter = scoreCounter + 3
             if (clusterLevel < 3)
             {
@@ -443,7 +494,18 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 100 && self.equivCount[equivNum] < 150) {
-            node.color = self.classColors[0]
+            if (equivNum == i)
+            {
+                galaxy.position = node.position
+                galaxy.zPosition = node.zPosition + 1.0
+                galaxy.size = galaxySizes[3]
+                galaxy.isHidden = false
+            }
+            else{
+                galaxy.isHidden = true
+            }
+            //node.color = self.classColors[0]
+            node.color = black
             scoreCounter = scoreCounter + 4
             if (clusterLevel < 4)
             {
@@ -452,7 +514,18 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 150 && self.equivCount[equivNum] < 250) {
-            node.color = self.classColors[4]
+            if (equivNum == i)
+            {
+                galaxy.position = node.position
+                galaxy.zPosition = node.zPosition + 1.0
+                galaxy.size = galaxySizes[4]
+                galaxy.isHidden = false
+            }
+            else{
+                galaxy.isHidden = true
+            }
+            //node.color = self.classColors[4]
+            node.color = black
             scoreCounter = scoreCounter + 5
             if (clusterLevel < 5)
             {
@@ -461,7 +534,18 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 250) {
-            node.color = self.classColors[5]
+            if (equivNum == i)
+            {
+                galaxy.position = node.position
+                galaxy.zPosition = node.zPosition + 1.0
+                galaxy.size = galaxySizes[5]
+                galaxy.isHidden = false
+            }
+            else{
+                galaxy.isHidden = true
+            }
+            //node.color = self.classColors[5]
+            node.color = black
             scoreCounter = scoreCounter + 6
             if (clusterLevel < 6)
             {
@@ -471,6 +555,7 @@ class GameScene: SKScene {
         }
         else {
             node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
+            galaxy.isHidden = true
         }
     }
     

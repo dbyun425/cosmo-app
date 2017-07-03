@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E00DC4F31EDDC59D00F1F07B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00DC4F21EDDC59D00F1F07B /* AVFoundation.framework */; };
 		E038DAAD1EE895E000237DD3 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038DAAC1EE895E000237DD3 /* MainMenuController.swift */; };
+		E059779D1EFAF5DE009FAC7F /* galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E059779C1EFAF5DE009FAC7F /* galaxy.jpg */; };
+		E059779F1EFB01E4009FAC7F /* galaxytest.png in Resources */ = {isa = PBXBuildFile; fileRef = E059779E1EFB01E4009FAC7F /* galaxytest.png */; };
 		E0B283D01EDE0B8C0066A3E7 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = E0B283CF1EDE0B8C0066A3E7 /* Sounds */; };
 		E0D653A11E83451C0052719E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D653A01E83451C0052719E /* Main.storyboard */; };
 		E0F830741E6F46E600059ADE /* ics_100_32_neg1_a_slice in Resources */ = {isa = PBXBuildFile; fileRef = E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */; };
@@ -103,6 +105,8 @@
 /* Begin PBXFileReference section */
 		E00DC4F21EDDC59D00F1F07B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E038DAAC1EE895E000237DD3 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		E059779C1EFAF5DE009FAC7F /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galaxy.jpg; sourceTree = "<group>"; };
+		E059779E1EFB01E4009FAC7F /* galaxytest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galaxytest.png; sourceTree = "<group>"; };
 		E0B283CF1EDE0B8C0066A3E7 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		E0D653A01E83451C0052719E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E0F830671E6F46E600059ADE /* ics_100_32_neg1_a_slice */ = {isa = PBXFileReference; lastKnownFileType = file; path = ics_100_32_neg1_a_slice; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				E745487D1B1E4BCC001D885B /* AppDelegate.swift */,
 				E7C566741B2A4080006E053A /* Cuboid.swift */,
 				E7B368E81BAEA39B007ECAB5 /* GameScene.swift */,
+				E059779E1EFB01E4009FAC7F /* galaxytest.png */,
+				E059779C1EFAF5DE009FAC7F /* galaxy.jpg */,
 				E74548811B1E4BCC001D885B /* GameScene_old.swift */,
 				E74548831B1E4BCC001D885B /* GameViewController.swift */,
 				E0FA93521E78ED050072820F /* MenuController.swift */,
@@ -481,6 +487,7 @@
 				E7B368E31BAE96B3007ECAB5 /* COPYRIGHT in Resources */,
 				E745488C1B1E4BCC001D885B /* LaunchScreen.xib in Resources */,
 				FED681241D1C7B7E00A80DE7 /* ics_100_64_a3_slice in Resources */,
+				E059779F1EFB01E4009FAC7F /* galaxytest.png in Resources */,
 				FEBEBCFF1D18427600B14B96 /* readIn.bundle in Resources */,
 				E7A11C1A1B22079B0056DF1C /* snapshot_002 in Resources */,
 				E7A11C1B1B22079B0056DF1C /* snapshot_003 in Resources */,
@@ -488,6 +495,7 @@
 				E0B283D01EDE0B8C0066A3E7 /* Sounds in Resources */,
 				E74548891B1E4BCC001D885B /* Images.xcassets in Resources */,
 				FE86776D1D3023F300B2D908 /* gadgetpicture.jpg in Resources */,
+				E059779D1EFAF5DE009FAC7F /* galaxy.jpg in Resources */,
 				E0F830771E6F46E600059ADE /* ics_100_32_plus2_a_slice in Resources */,
 				E74549011B1E4CFD001D885B /* gassphere.tex in Resources */,
 				FE4C6DD11D3031F500C980BF /* MenuScene.sks in Resources */,
