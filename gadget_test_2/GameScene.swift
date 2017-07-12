@@ -14,6 +14,15 @@ import Foundation
 import SpriteKit
 import AVFoundation
 
+struct ParticleGroup{
+    var particles: [SKSpriteNode]
+    var numOfParticles: Int
+    var cmX: CGFloat
+    var cmY: CGFloat
+}
+
+typealias Group = ParticleGroup
+
 var audioPlayer: AVAudioPlayer!
 
 let path = Bundle.main.path(forResource: "Sounds/254031__jagadamba__space-sound", ofType:"wav")!
@@ -28,6 +37,7 @@ class GameScene: SKScene {
     
     var points: [SKSpriteNode] // marks the location of particles
     var galaxySprite: [SKSpriteNode]
+    var groups: [Group]
     var galaxySizes: [CGSize]
     var totalParticles: Int
     
@@ -84,6 +94,7 @@ class GameScene: SKScene {
         self.points = []
         self.galaxySprite = []
         self.galaxySizes = []
+        self.groups = []
         self.totalParticles = Int(All.TotNumPart)
         initTime = Date().timeIntervalSinceReferenceDate
         // initialize cuboid transform parameters (choose one)
