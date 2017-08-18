@@ -9,24 +9,15 @@
 import UIKit
 
 
-class MenuController: UIViewController {
+class MenuController: UITableViewController {
     @IBOutlet weak var initCond1: UIButton!
     
-    @IBAction func beforeStage1(_ sender: Any) {
+
+    @IBAction func loadStage1(_ sender: UIButton) {
         playing = 1
-        level = 1
-    }
-    @IBAction func beforeStage2(_ sender: Any) {
-        playing = 1
-        level = 2
-    }
-    @IBAction func beforeStage3(_ sender: Any) {
-        playing = 1
-        level = 3
-    }
-    @IBAction func beforeStage4(_ sender: Any) {
-        playing = 1
-        level = 4
+        let str = sender.titleLabel?.text
+        let intString = str?.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        level = Int32(intString!)!
     }
     
     @IBAction func getout(_ sender: UIBarButtonItem) {

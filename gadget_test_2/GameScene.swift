@@ -19,9 +19,9 @@ var audioPlayer: AVAudioPlayer!
 let path = Bundle.main.path(forResource: "Sounds/254031__jagadamba__space-sound", ofType:"wav")!
 let url = URL(fileURLWithPath: path)
 
-var musicPlayer: AVAudioPlayer!
-let musicPath = Bundle.main.path(forResource: "Sounds/DST-PhaserSwitch", ofType:"mp3")!
-let musicUrl = URL(fileURLWithPath: musicPath)
+//var musicPlayer: AVAudioPlayer!
+//let musicPath = Bundle.main.path(forResource: "Sounds/DST-PhaserSwitch", ofType:"mp3")!
+//let musicUrl = URL(fileURLWithPath: musicPath)
 var initTime = Date().timeIntervalSinceReferenceDate
 
 class GameScene: SKScene {
@@ -38,6 +38,7 @@ class GameScene: SKScene {
     var touchTracker: SKShapeNode // tracks touch location for interaction
     var accelLabel: SKLabelNode // displays acceleration used for interaction
     var galaxyCounter: SKLabelNode // displays the number of galaxies
+    var highScore: SKLabelNode
     var prevPinchScale: CGFloat = 1.0
     
     var chainMesh: [[[Int]]]
@@ -75,10 +76,10 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         let sound = try! AVAudioPlayer(contentsOf: url)
         audioPlayer = sound
-        let music = try! AVAudioPlayer(contentsOf: musicUrl)
-        musicPlayer = music
-        music.play();
-        music.numberOfLoops = -1
+        //let music = try! AVAudioPlayer(contentsOf: musicUrl)
+        //musicPlayer = music
+        //music.play();
+        //music.numberOfLoops = -1
         clusterLevel = 0;
         // initialize
         self.points = []
@@ -118,6 +119,9 @@ class GameScene: SKScene {
         self.galaxyCounter = SKLabelNode(text: "NUMBER OF GALAXIES:")
         self.galaxyCounter.color = UIColor.white
         
+        self.highScore = SKLabelNode(text: "Hiscore")
+        self.highScore.color = UIColor.white
+        
         self.chainMesh = [[[Int]]](repeating: [[Int]](repeating: [Int](), count: Int(All.BoxSize)/self.cellSize), count: Int(All.BoxSize)/self.cellSize)
         
         // finalize
@@ -127,8 +131,10 @@ class GameScene: SKScene {
         self.addChild(self.touchTracker)
         self.accelLabel.position = CGPoint(x: self.frame.width / 2.0, y: self.frame.height - 100.0)
         self.galaxyCounter.position = CGPoint(x: self.frame.width - 70.0 , y: self.frame.height - 100.0)
+        self.highScore.position = CGPoint(x: self.frame.width + 70.0 , y: self.frame.height - 100.0)
         self.addChild(self.accelLabel)
         self.addChild(self.galaxyCounter)
+        self.addChild(self.highScore)
         
         //add points and galaxy
         let pointSize = CGSize(width: 2.0, height: 2.0)
@@ -323,7 +329,8 @@ class GameScene: SKScene {
         }
         
         // update acceleration label
-        self.accelLabel.text = "\((Int)(Date().timeIntervalSinceReferenceDate-initTime))"
+        let time = (Float)(60 - (Date().timeIntervalSinceReferenceDate-initTime))
+        self.accelLabel.text = "\(13.7 * time/60.0) Billion years ago"
         self.galaxyCounter.text = "\(scoreCounter)"
         }
     }

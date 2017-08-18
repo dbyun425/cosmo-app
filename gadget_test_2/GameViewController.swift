@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var menu: UIButton!
     
     @IBAction func actionBeforeUnwind(_ sender: Any) {
-            musicPlayer.stop()
+            //musicPlayer.stop()
             playing = 0
     }
     

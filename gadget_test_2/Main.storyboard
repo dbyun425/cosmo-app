@@ -41,7 +41,7 @@
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                         <connections>
-                                            <segue destination="5fu-Lr-dbl" kind="show" id="WcZ-Vm-GQo"/>
+                                            <segue destination="oUI-I2-oMW" kind="show" id="q8K-rq-ae9"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eEj-8Z-OHd">
@@ -97,21 +97,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nqg-yV-8jU">
-                                        <rect key="frame" x="0.0" y="176" width="1024" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nqg-yV-8jU" id="LS2-vl-t5r">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-Cs-N9B">
-                                                    <rect key="frame" x="467" y="6" width="90" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Super Secret"/>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -145,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cD-Xj-Mek">
-                                <rect key="frame" x="6" y="8" width="789" height="325"/>
+                                <rect key="frame" x="6" y="8" width="789" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -164,8 +149,7 @@ Research Assistants
 Sound sources
 -"Space Sound" by Jagadamba: https://www.freesound.org/people/Jagadamba/sounds/254031/
  Licensed under Attribution Non-Commercial License: https://creativecommons.org/licenses/by-nc/3.0/
--"DST-PhaserSwitch" from nosoapradio.us
-  Licensed under Attribution 3.0 Unported License</string>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -177,70 +161,108 @@ Sound sources
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JgQ-Yo-9TV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1347" y="-141"/>
+            <point key="canvasLocation" x="-1342" y="-177"/>
         </scene>
         <!--Level Select-->
-        <scene sceneID="KI5-tw-4FK">
+        <scene sceneID="cHu-EO-elv">
             <objects>
-                <viewController storyboardIdentifier="LevelMenu" id="5fu-Lr-dbl" customClass="MenuController" customModule="gadget_test_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cWv-Db-YyY"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZB0-km-e62"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yvj-4p-wmU">
+                <tableViewController title="Level Select" id="oUI-I2-oMW" customClass="MenuController" customModule="gadget_test_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cs1-36-2kh">
                         <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIw-Rd-H9D">
-                                <rect key="frame" x="20" y="64" width="140" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Initial Condition 1"/>
-                                <connections>
-                                    <action selector="beforeStage1:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="Eoz-Ro-X6e"/>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="lK6-bl-g7u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDs-uD-1cI">
-                                <rect key="frame" x="20" y="101" width="140" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Initial Condition 2"/>
-                                <connections>
-                                    <action selector="beforeStage2:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="gmm-5d-etN"/>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="rOa-mV-mnV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-XS-166">
-                                <rect key="frame" x="20" y="176" width="140" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Initial Condition 4"/>
-                                <connections>
-                                    <action selector="beforeStage4:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="qn6-Od-nXV"/>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="Num-vv-nPz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koY-05-54d">
-                                <rect key="frame" x="20" y="139" width="140" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Initial Condition 3"/>
-                                <connections>
-                                    <action selector="beforeStage3:" destination="5fu-Lr-dbl" eventType="touchUpInside" id="q5a-Lp-3bQ"/>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="3XS-yu-CWF"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Level Select" id="Wx5-RK-lxx">
-                        <barButtonItem key="backBarButtonItem" title="Main Menu" id="Ndv-Ne-kQd"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <connections>
-                        <outlet property="initCond1" destination="RIw-Rd-H9D" id="f02-M5-rI2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aLA-Lv-w5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection id="7ch-IE-Wrb">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BuI-2e-yaJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BuI-2e-yaJ" id="SlE-lb-VEi">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFN-Oe-rMr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Stage 1"/>
+                                                    <connections>
+                                                        <action selector="loadStage1:" destination="oUI-I2-oMW" eventType="touchUpInside" id="6ma-Kv-7W0"/>
+                                                        <segue destination="BV1-FR-VrT" kind="show" id="aU9-ZQ-nyH"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jKF-bV-jjj">
+                                        <rect key="frame" x="0.0" y="44" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jKF-bV-jjj" id="iBX-Jm-uBM">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyx-7k-64j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Stage 2"/>
+                                                    <connections>
+                                                        <action selector="loadStage1:" destination="oUI-I2-oMW" eventType="touchUpInside" id="gHf-Qf-XaD"/>
+                                                        <segue destination="BV1-FR-VrT" kind="show" id="y4m-l4-SEt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UBM-sQ-wfl">
+                                        <rect key="frame" x="0.0" y="88" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UBM-sQ-wfl" id="cDR-pi-0AN">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82A-vI-kPo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Stage 3"/>
+                                                    <connections>
+                                                        <action selector="loadStage1:" destination="oUI-I2-oMW" eventType="touchUpInside" id="ufb-mD-8LH"/>
+                                                        <segue destination="BV1-FR-VrT" kind="show" id="ZlG-BM-R6y"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9vh-zW-KdU">
+                                        <rect key="frame" x="0.0" y="132" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9vh-zW-KdU" id="c8O-Yl-0hB">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nk-eT-j0N">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Stage 4"/>
+                                                    <connections>
+                                                        <action selector="loadStage1:" destination="oUI-I2-oMW" eventType="touchUpInside" id="c28-IL-fng"/>
+                                                        <segue destination="BV1-FR-VrT" kind="show" id="uJ5-bE-pPw"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="oUI-I2-oMW" id="A0y-k5-7dW"/>
+                            <outlet property="delegate" destination="oUI-I2-oMW" id="U92-2M-IT4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="fMw-AR-1lb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iro-fj-ry0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-521.484375" y="-978.125"/>
+            <point key="canvasLocation" x="-595.3125" y="-978.125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oad-XU-tOP">
@@ -395,10 +417,10 @@ Sound sources
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
                 <exit id="VP2-df-4fL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-498.04687499999994" y="-182.03125"/>
+            <point key="canvasLocation" x="-595.3125" y="-176.5625"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rOa-mV-mnV"/>
+        <segue reference="ZlG-BM-R6y"/>
     </inferredMetricsTieBreakers>
 </document>
