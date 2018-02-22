@@ -114,7 +114,7 @@ void run() {
             
             #pragma GCC diagnostic push
             #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-            system(buf);
+            //system(buf);
             #pragma GCC diagnostic pop
         }
 
@@ -131,7 +131,7 @@ void run() {
                 sprintf(buf,"%s", All.ResubmitCommand);
                 #pragma GCC diagnostic push
                 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-                system(buf);
+                //system(buf);
                 #pragma GCC diagnostic pop
                 
                 

@@ -87,6 +87,7 @@ int interaction;
 float interactionFactor;
 float touchLocation[3];
 float accelerationFactor;
+float particleAlpha;
 
 //Adding string for pathways
 char* ewaldPath;

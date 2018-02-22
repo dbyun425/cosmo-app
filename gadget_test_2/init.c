@@ -120,6 +120,7 @@ void init(void) {
     //level = 1;
     playing = 1;
     interactionFactor = 1;
+    particleAlpha = 0;
     touchLocation[0] = 0.0;
     touchLocation[1] = 0.0;
     touchLocation[2] = 0.0;

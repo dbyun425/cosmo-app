@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71AE5872203F76BF008422D7 /* LevelSelectImgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871203F76BF008422D7 /* LevelSelectImgController.swift */; };
+		71FEFCAE2023BFD500455EBA /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FEFCAD2023BFD500455EBA /* Galaxy.swift */; };
 		E00DC4F31EDDC59D00F1F07B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00DC4F21EDDC59D00F1F07B /* AVFoundation.framework */; };
 		E038DAAD1EE895E000237DD3 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038DAAC1EE895E000237DD3 /* MainMenuController.swift */; };
 		E059779D1EFAF5DE009FAC7F /* galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E059779C1EFAF5DE009FAC7F /* galaxy.jpg */; };
@@ -103,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71AE5871203F76BF008422D7 /* LevelSelectImgController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectImgController.swift; sourceTree = "<group>"; };
+		71FEFCAD2023BFD500455EBA /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		E00DC4F21EDDC59D00F1F07B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E038DAAC1EE895E000237DD3 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		E059779C1EFAF5DE009FAC7F /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galaxy.jpg; sourceTree = "<group>"; };
@@ -263,12 +267,14 @@
 				E0FA93521E78ED050072820F /* MenuController.swift */,
 				E038DAAC1EE895E000237DD3 /* MainMenuController.swift */,
 				E0D653A01E83451C0052719E /* Main.storyboard */,
+				71AE5871203F76BF008422D7 /* LevelSelectImgController.swift */,
 				E74548881B1E4BCC001D885B /* Images.xcassets */,
 				E745488A1B1E4BCC001D885B /* LaunchScreen.xib */,
 				FE4C6DD01D3031F500C980BF /* MenuScene.sks */,
 				FE8677681D2EEFF700B2D908 /* MenuScene.swift */,
 				E74548A21B1E4CC2001D885B /* gadget_test_2-Bridging-Header.h */,
 				E74548A11B1E4C8B001D885B /* S-Gadget */,
+				71FEFCAD2023BFD500455EBA /* Galaxy.swift */,
 			);
 			path = gadget_test_2;
 			sourceTree = "<group>";
@@ -445,8 +451,9 @@
 				TargetAttributes = {
 					E74548771B1E4BCC001D885B = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = AW9Z9PGB4C;
+						DevelopmentTeam = G8CKK6W98Y;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					E74548901B1E4BCC001D885B = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -571,11 +578,13 @@
 				E74548D61B1E4CF0001D885B /* predict.c in Sources */,
 				E7C566751B2A4080006E053A /* Cuboid.swift in Sources */,
 				E74548B91B1E4CC2001D885B /* allvars.c in Sources */,
+				71AE5872203F76BF008422D7 /* LevelSelectImgController.swift in Sources */,
 				E74548DE1B1E4CF0001D885B /* veldisp.c in Sources */,
 				E74548C61B1E4CC2001D885B /* init.c in Sources */,
 				E74548C11B1E4CC2001D885B /* global.c in Sources */,
 				FE8677691D2EEFF700B2D908 /* MenuScene.swift in Sources */,
 				E74548D91B1E4CF0001D885B /* restart.c in Sources */,
+				71FEFCAE2023BFD500455EBA /* Galaxy.swift in Sources */,
 				E74548BF1B1E4CC2001D885B /* forcetree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,7 +720,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = AW9Z9PGB4C;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8CKK6W98Y;
 				INFOPLIST_FILE = gadget_test_2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
@@ -719,9 +729,10 @@
 					"-DBMAX",
 				);
 				"OTHER_CFLAGS[arch=*]" = "-DPERIODIC";
-				PRODUCT_BUNDLE_IDENTIFIER = "temp.gadget-test-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "temp.gadget-test-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "gadget_test_2/gadget_test_2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -735,7 +746,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = AW9Z9PGB4C;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8CKK6W98Y;
 				INFOPLIST_FILE = gadget_test_2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
@@ -743,9 +755,10 @@
 					"-DBMAX",
 				);
 				"OTHER_CFLAGS[arch=*]" = "-DPERIODIC";
-				PRODUCT_BUNDLE_IDENTIFIER = "temp.gadget-test-3";
+				PRODUCT_BUNDLE_IDENTIFIER = "temp.gadget-test-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "gadget_test_2/gadget_test_2-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

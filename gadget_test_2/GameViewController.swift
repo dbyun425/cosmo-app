@@ -30,6 +30,12 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var menu: UIButton!
     
+    @IBOutlet weak var dmSwitch: UISwitch!{
+        didSet{
+            dmSwitch.setOn(false, animated: true)
+        }
+    }
+    
     @IBAction func actionBeforeUnwind(_ sender: Any) {
             //musicPlayer.stop()
             playing = 0
@@ -60,6 +66,15 @@ class GameViewController: UIViewController {
         print("sadgaergeqhrtwhwrthwrthwrthwtrhwtrh")
         interactionFactor = sender.value
         print(interactionFactor)
+    }
+    
+    @IBAction func switchAlpha(_ sender: UISwitch) {
+        if(sender.isOn){
+            particleAlpha = 1
+        }
+        else{
+            particleAlpha = 0
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -44,6 +44,10 @@ class GameScene: SKScene {
     var chainMesh: [[[Int]]]
     var cellSize: Int = 500
 
+    let dimrate : CGFloat = 0.001
+    let cgepsilon : CGFloat = 0.00000001
+    var clearlevel : CGFloat = 1
+    //var timeSinceViewed : Float = -1.0
     //colors were retrieved from the following website http://cloford.com/resources/colours/500col.htm
     var classColors: [UIColor] = [
         UIColor(red: 255.0/255.0, green: 215.0/255.0, blue: 0.0, alpha: 1.0), //gold1
@@ -294,7 +298,9 @@ class GameScene: SKScene {
             let thisGalaxy = self.galaxySprite[i]
             thisPoint.position = CGPoint(x: xPos, y: yPos)
             thisPoint.zPosition = zPos
-            self.setColor(thisPoint, i: i + 1, thisGalaxy)
+            if(playing != 0){
+                self.setColor(thisPoint, i: i + 1, thisGalaxy)
+            }
         }
         
         //if (self.timeCounter == 100) {
@@ -330,8 +336,14 @@ class GameScene: SKScene {
         
         // update acceleration label
         let time = (Float)(60 - (Date().timeIntervalSinceReferenceDate-initTime))
-        self.accelLabel.text = "\(13.7 * time/60.0) Billion years ago"
-        self.galaxyCounter.text = "\(scoreCounter)"
+            if(time >= 0){
+                self.accelLabel.text = "\(13.7 * time/60.0) Billion years ago"
+                self.galaxyCounter.text = "\(scoreCounter)"
+            }
+            else{
+                self.accelLabel.text = "\(-1 * 13.7 * time/60.0) Billion years after"
+                self.galaxyCounter.text = "\(scoreCounter)"
+            }
         }
     }
     
@@ -438,7 +450,7 @@ class GameScene: SKScene {
         let (equivNum,classBool) = self.equivClass[i]
         let black = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         if (i == 1) {
-            node.color = black
+            //node.color = black
         }
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
             if (equivNum == i)
@@ -451,8 +463,8 @@ class GameScene: SKScene {
             else{
                 galaxy.isHidden = true
             }
-            //node.color = self.classColors[3]
-            node.color = black
+            node.color = self.classColors[3]
+            //node.color = black
             scoreCounter = scoreCounter + 1
             if (clusterLevel < 1)
             {
@@ -471,8 +483,8 @@ class GameScene: SKScene {
             else{
                 galaxy.isHidden = true
             }
-            //node.color = self.classColors[2]
-            node.color = black
+            node.color = self.classColors[2]
+            //node.color = black
             scoreCounter = scoreCounter + 2
             if (clusterLevel < 2)
             {
@@ -491,8 +503,8 @@ class GameScene: SKScene {
             else{
                 galaxy.isHidden = true
             }
-            //node.color = self.classColors[1]
-            node.color = black
+            node.color = self.classColors[1]
+            //node.color = black
             scoreCounter = scoreCounter + 3
             if (clusterLevel < 3)
             {
@@ -511,8 +523,8 @@ class GameScene: SKScene {
             else{
                 galaxy.isHidden = true
             }
-            //node.color = self.classColors[0]
-            node.color = black
+            node.color = self.classColors[0]
+            //node.color = black
             scoreCounter = scoreCounter + 4
             if (clusterLevel < 4)
             {
@@ -531,8 +543,8 @@ class GameScene: SKScene {
             else{
                 galaxy.isHidden = true
             }
-            //node.color = self.classColors[4]
-            node.color = black
+            node.color = self.classColors[4]
+            //node.color = black
             scoreCounter = scoreCounter + 5
             if (clusterLevel < 5)
             {
@@ -551,8 +563,8 @@ class GameScene: SKScene {
             else{
                 galaxy.isHidden = true
             }
-            //node.color = self.classColors[5]
-            node.color = black
+            node.color = self.classColors[5]
+            //node.color = black
             scoreCounter = scoreCounter + 6
             if (clusterLevel < 6)
             {
@@ -563,6 +575,14 @@ class GameScene: SKScene {
         else {
             node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
             galaxy.isHidden = true
+        }
+        let c : UIColor = node.color
+        var r : CGFloat = 0
+        var g : CGFloat = 0
+        var b : CGFloat = 0
+        var a : CGFloat = 0
+        if c.getRed(&r, green: &g, blue: &b, alpha: &a){
+            node.color = UIColor(red: r, green: g, blue: b, alpha: CGFloat.init(particleAlpha))
         }
     }
     
