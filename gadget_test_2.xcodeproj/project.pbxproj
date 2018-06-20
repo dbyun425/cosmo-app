@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71AE5872203F76BF008422D7 /* LevelSelectImgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE5871203F76BF008422D7 /* LevelSelectImgController.swift */; };
+		714A8B3420D8790800C05C20 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A8B3320D8790800C05C20 /* Structures.swift */; };
+		716280DF20499EF000004B27 /* levels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 716280DE20499EF000004B27 /* levels.txt */; };
+		7172375720659A6900C324D3 /* MechanicTestingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172375620659A6900C324D3 /* MechanicTestingController.swift */; };
+		7172375B20659BEB00C324D3 /* testReadWrite.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7172375A20659BEB00C324D3 /* testReadWrite.txt */; };
+		71AE587420403A35008422D7 /* LevelSelectImgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE587320403A35008422D7 /* LevelSelectImgController.swift */; };
 		71FEFCAE2023BFD500455EBA /* Galaxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FEFCAD2023BFD500455EBA /* Galaxy.swift */; };
 		E00DC4F31EDDC59D00F1F07B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00DC4F21EDDC59D00F1F07B /* AVFoundation.framework */; };
 		E038DAAD1EE895E000237DD3 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038DAAC1EE895E000237DD3 /* MainMenuController.swift */; };
@@ -105,7 +109,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		71AE5871203F76BF008422D7 /* LevelSelectImgController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectImgController.swift; sourceTree = "<group>"; };
+		714A8B3320D8790800C05C20 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
+		716280DE20499EF000004B27 /* levels.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = levels.txt; sourceTree = "<group>"; };
+		7172375620659A6900C324D3 /* MechanicTestingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechanicTestingController.swift; sourceTree = "<group>"; };
+		7172375A20659BEB00C324D3 /* testReadWrite.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testReadWrite.txt; sourceTree = "<group>"; };
+		71AE587320403A35008422D7 /* LevelSelectImgController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectImgController.swift; sourceTree = "<group>"; };
 		71FEFCAD2023BFD500455EBA /* Galaxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galaxy.swift; sourceTree = "<group>"; };
 		E00DC4F21EDDC59D00F1F07B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E038DAAC1EE895E000237DD3 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
@@ -224,6 +232,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7172375420652B1500C324D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7172375C20659BF100C324D3 /* Testing */,
+				7172375920659BAA00C324D3 /* Text Files */,
+				7172375520654C8A00C324D3 /* Images */,
+				E0B283CF1EDE0B8C0066A3E7 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7172375520654C8A00C324D3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE86776C1D3023F300B2D908 /* gadgetpicture.jpg */,
+				E059779E1EFB01E4009FAC7F /* galaxytest.png */,
+				E059779C1EFAF5DE009FAC7F /* galaxy.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7172375820659B4F00C324D3 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E745487D1B1E4BCC001D885B /* AppDelegate.swift */,
+				E7C566741B2A4080006E053A /* Cuboid.swift */,
+				714A8B3320D8790800C05C20 /* Structures.swift */,
+				E7B368E81BAEA39B007ECAB5 /* GameScene.swift */,
+				71AE587320403A35008422D7 /* LevelSelectImgController.swift */,
+				E74548811B1E4BCC001D885B /* GameScene_old.swift */,
+				E74548831B1E4BCC001D885B /* GameViewController.swift */,
+				7172375620659A6900C324D3 /* MechanicTestingController.swift */,
+				E0FA93521E78ED050072820F /* MenuController.swift */,
+				E038DAAC1EE895E000237DD3 /* MainMenuController.swift */,
+				FE8677681D2EEFF700B2D908 /* MenuScene.swift */,
+				71FEFCAD2023BFD500455EBA /* Galaxy.swift */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		7172375920659BAA00C324D3 /* Text Files */ = {
+			isa = PBXGroup;
+			children = (
+				716280DE20499EF000004B27 /* levels.txt */,
+			);
+			path = "Text Files";
+			sourceTree = "<group>";
+		};
+		7172375C20659BF100C324D3 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				7172375A20659BEB00C324D3 /* testReadWrite.txt */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
 		E00DC4F11EDDC59C00F1F07B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,27 +318,15 @@
 		E745487A1B1E4BCC001D885B /* gadget_test_2 */ = {
 			isa = PBXGroup;
 			children = (
-				FE86776C1D3023F300B2D908 /* gadgetpicture.jpg */,
-				E0B283CF1EDE0B8C0066A3E7 /* Sounds */,
+				7172375420652B1500C324D3 /* Resources */,
+				7172375820659B4F00C324D3 /* Scripts */,
 				E7B368E41BAE96D0007ECAB5 /* README */,
-				E745487D1B1E4BCC001D885B /* AppDelegate.swift */,
-				E7C566741B2A4080006E053A /* Cuboid.swift */,
-				E7B368E81BAEA39B007ECAB5 /* GameScene.swift */,
-				E059779E1EFB01E4009FAC7F /* galaxytest.png */,
-				E059779C1EFAF5DE009FAC7F /* galaxy.jpg */,
-				E74548811B1E4BCC001D885B /* GameScene_old.swift */,
-				E74548831B1E4BCC001D885B /* GameViewController.swift */,
-				E0FA93521E78ED050072820F /* MenuController.swift */,
-				E038DAAC1EE895E000237DD3 /* MainMenuController.swift */,
 				E0D653A01E83451C0052719E /* Main.storyboard */,
-				71AE5871203F76BF008422D7 /* LevelSelectImgController.swift */,
 				E74548881B1E4BCC001D885B /* Images.xcassets */,
 				E745488A1B1E4BCC001D885B /* LaunchScreen.xib */,
 				FE4C6DD01D3031F500C980BF /* MenuScene.sks */,
-				FE8677681D2EEFF700B2D908 /* MenuScene.swift */,
 				E74548A21B1E4CC2001D885B /* gadget_test_2-Bridging-Header.h */,
 				E74548A11B1E4C8B001D885B /* S-Gadget */,
-				71FEFCAD2023BFD500455EBA /* Galaxy.swift */,
 			);
 			path = gadget_test_2;
 			sourceTree = "<group>";
@@ -444,6 +496,11 @@
 		E74548701B1E4BCC001D885B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"Stage 1",
+					"Stage 2",
+					Test,
+				);
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0820;
@@ -501,6 +558,7 @@
 				E74549021B1E4CFD001D885B /* lcdm_gas.tex in Resources */,
 				E0B283D01EDE0B8C0066A3E7 /* Sounds in Resources */,
 				E74548891B1E4BCC001D885B /* Images.xcassets in Resources */,
+				716280DF20499EF000004B27 /* levels.txt in Resources */,
 				FE86776D1D3023F300B2D908 /* gadgetpicture.jpg in Resources */,
 				E059779D1EFAF5DE009FAC7F /* galaxy.jpg in Resources */,
 				E0F830771E6F46E600059ADE /* ics_100_32_plus2_a_slice in Resources */,
@@ -512,6 +570,7 @@
 				E7A11C171B22079B0056DF1C /* restart in Resources */,
 				E0F830751E6F46E600059ADE /* ics_100_32_neg2_a_slice in Resources */,
 				E7A11C131B22079B0056DF1C /* cpu.txt in Resources */,
+				7172375B20659BEB00C324D3 /* testReadWrite.txt in Resources */,
 				E0F830801E6F46E600059ADE /* ics_100_64_zero_a_slice in Resources */,
 				E74549001B1E4CFD001D885B /* galaxy.tex in Resources */,
 				E7A11C141B22079B0056DF1C /* energy.txt in Resources */,
@@ -560,6 +619,7 @@
 				E74548C71B1E4CC2001D885B /* io.c in Sources */,
 				E74548821B1E4BCC001D885B /* GameScene_old.swift in Sources */,
 				E74548D41B1E4CF0001D885B /* potential.c in Sources */,
+				7172375720659A6900C324D3 /* MechanicTestingController.swift in Sources */,
 				E74548841B1E4BCC001D885B /* GameViewController.swift in Sources */,
 				E0FA93531E78ED050072820F /* MenuController.swift in Sources */,
 				E74548DB1B1E4CF0001D885B /* system.c in Sources */,
@@ -570,6 +630,7 @@
 				E74548BE1B1E4CC2001D885B /* ewald.c in Sources */,
 				E7B25C341B72630E00700B79 /* particle_interactions.c in Sources */,
 				E038DAAD1EE895E000237DD3 /* MainMenuController.swift in Sources */,
+				714A8B3420D8790800C05C20 /* Structures.swift in Sources */,
 				E74548B81B1E4CC2001D885B /* allocate.c in Sources */,
 				E74548DC1B1E4CF0001D885B /* timeline.c in Sources */,
 				E74548BD1B1E4CC2001D885B /* endrun.c in Sources */,
@@ -578,7 +639,7 @@
 				E74548D61B1E4CF0001D885B /* predict.c in Sources */,
 				E7C566751B2A4080006E053A /* Cuboid.swift in Sources */,
 				E74548B91B1E4CC2001D885B /* allvars.c in Sources */,
-				71AE5872203F76BF008422D7 /* LevelSelectImgController.swift in Sources */,
+				71AE587420403A35008422D7 /* LevelSelectImgController.swift in Sources */,
 				E74548DE1B1E4CF0001D885B /* veldisp.c in Sources */,
 				E74548C61B1E4CC2001D885B /* init.c in Sources */,
 				E74548C11B1E4CC2001D885B /* global.c in Sources */,

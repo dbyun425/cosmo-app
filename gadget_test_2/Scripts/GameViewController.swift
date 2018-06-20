@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import Foundation
 
 extension SKNode {
     class func unarchiveFromFile(_ file : String) -> SKNode? {
@@ -28,11 +29,29 @@ extension SKNode {
 class GameViewController: UIViewController {
     var semaphore: DispatchSemaphore
     
+    var levelLength : Int = 0
+    var levelArray : [String] = []
+    let levelsFd = (Bundle.main.resourcePath! as NSString).appendingPathComponent("levels.txt")
+    var isLevelsLoaded = false
+    
+    func getLevels(){
+        do{
+            let contents = try NSString(contentsOfFile : levelsFd, encoding: String.Encoding.ascii.rawValue)
+            contents.enumerateLines({(line,stop) -> () in self.levelArray.append(line)})
+        } catch{
+            print("ERROR: WRONG TEXT FILE")
+        }
+        self.levelLength = self.levelArray.count
+        if(levelLength > 0){
+            self.isLevelsLoaded = true
+        }
+    }
+    
     @IBOutlet weak var menu: UIButton!
     
     @IBOutlet weak var dmSwitch: UISwitch!{
         didSet{
-            dmSwitch.setOn(false, animated: true)
+            dmSwitch.setOn(true, animated: true)
         }
     }
     
@@ -92,9 +111,17 @@ class GameViewController: UIViewController {
         // start Gadget on background thread
         let queue = DispatchQueue.global(qos: DispatchQoS.QoSClass.utility)
         
+        if(!isLevelsLoaded){
+            getLevels()
+        }
+        
         queue.async(execute: { () -> Void in
             var input = ""
-            switch(level)
+            if(level < self.levelLength){
+                input = self.levelArray[Int(level)]
+            } else{
+                input = "ics_100_32_zero_a_slice"
+            /*switch(level)
             {
             case(1):
                 input = "ics_100_32_neg1_a_slice"
@@ -110,7 +137,7 @@ class GameViewController: UIViewController {
                 break
             default:
                 input = "ics_100_32_zero_a_slice"
-                break
+                break*/
                 
             }
             gadget_main_setup(strdup(input))

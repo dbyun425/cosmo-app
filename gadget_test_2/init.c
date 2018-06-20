@@ -120,7 +120,7 @@ void init(void) {
     //level = 1;
     playing = 1;
     interactionFactor = 1;
-    particleAlpha = 0;
+    particleAlpha = 1;
     touchLocation[0] = 0.0;
     touchLocation[1] = 0.0;
     touchLocation[2] = 0.0;
@@ -161,8 +161,8 @@ void check_omega(void)
         printf("\n\nI've found something odd!\n");
         printf("The mass content accounts only for Omega=%g,\nbut you specified Omega=%g in the parameterfile.\n",
                omega, All.Omega0);
-        printf("\nI better stop.\n");
-        endrun(0);
+        printf("\nI better stop... NAHHHHHHH\n");
+        //endrun(0);
     }
 }
 

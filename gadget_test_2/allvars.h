@@ -401,6 +401,7 @@ extern struct io_header_1
 
 
 // MODIFICATION
+
 // variables for interactions with particles
 extern int interaction; // 1: on ,0: off
 extern float interactionFactor; // +1: attract, -1: repel

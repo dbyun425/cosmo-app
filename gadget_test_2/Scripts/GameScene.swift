@@ -286,7 +286,8 @@ class GameScene: SKScene {
         //       KNOWS WHAT HE'S DOING
         scoreCounter = 0
         for i in 0 ..< self.totalParticles {
-            let (xPos1, yPos1, zPos1) = P[i + 1].Pos // retrieve particle position from all particle data // <---- THIS PART
+            let (xPos1, yPos1, zPos1) = P[i + 1].Pos // retrieve particle position from all particle data
+            // <---- THIS PART crashes when the game is kept on too long
             var xPos = CGFloat(xPos1)
             var yPos = CGFloat(yPos1)
             var zPos = CGFloat(zPos1)
@@ -306,6 +307,10 @@ class GameScene: SKScene {
         //if (self.timeCounter == 100) {
             for n in 0..<self.totalParticles {
                 let (x,y,_) = P[n+1].Pos
+                //HEY, SOMETHING IS OUT OF RANGE IDIOT
+                if(x < 0){
+                    return
+                }
                 self.chainMesh[(Int(x)%Int(All.BoxSize))/self.cellSize][(Int(y)%Int(All.BoxSize))/self.cellSize].append(n+1)
                 self.equivClass[n+1] = (n+1,false)
                 self.equivCount[n+1] = 1
@@ -449,10 +454,13 @@ class GameScene: SKScene {
     func setColor(_ node: SKSpriteNode, i: Int, _ galaxy: SKSpriteNode) {
         let (equivNum,classBool) = self.equivClass[i]
         let black = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        var size = 0
+        var isOff = false
         if (i == 1) {
             //node.color = black
         }
         else if (classBool && self.equivCount[equivNum] >= 15 && self.equivCount[equivNum] < 30) {
+            /*
             if (equivNum == i)
             {
                 galaxy.position = node.position
@@ -462,7 +470,8 @@ class GameScene: SKScene {
             }
             else{
                 galaxy.isHidden = true
-            }
+            }*/
+            
             node.color = self.classColors[3]
             //node.color = black
             scoreCounter = scoreCounter + 1
@@ -473,6 +482,7 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 30 && self.equivCount[equivNum] < 60) {
+            /*
             if (equivNum == i)
             {
                 galaxy.position = node.position
@@ -482,7 +492,10 @@ class GameScene: SKScene {
             }
             else{
                 galaxy.isHidden = true
-            }
+            }*/
+            
+            size = 1
+            
             node.color = self.classColors[2]
             //node.color = black
             scoreCounter = scoreCounter + 2
@@ -493,6 +506,7 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 60 && self.equivCount[equivNum] < 100) {
+            /*
             if (equivNum == i)
             {
                 galaxy.position = node.position
@@ -502,7 +516,10 @@ class GameScene: SKScene {
             }
             else{
                 galaxy.isHidden = true
-            }
+            }*/
+            
+            size = 2
+            
             node.color = self.classColors[1]
             //node.color = black
             scoreCounter = scoreCounter + 3
@@ -513,6 +530,7 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 100 && self.equivCount[equivNum] < 150) {
+            /*
             if (equivNum == i)
             {
                 galaxy.position = node.position
@@ -522,7 +540,10 @@ class GameScene: SKScene {
             }
             else{
                 galaxy.isHidden = true
-            }
+            }*/
+            
+            size = 3
+            
             node.color = self.classColors[0]
             //node.color = black
             scoreCounter = scoreCounter + 4
@@ -533,6 +554,7 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 150 && self.equivCount[equivNum] < 250) {
+            /*
             if (equivNum == i)
             {
                 galaxy.position = node.position
@@ -542,7 +564,10 @@ class GameScene: SKScene {
             }
             else{
                 galaxy.isHidden = true
-            }
+            }*/
+            
+            size = 4
+            
             node.color = self.classColors[4]
             //node.color = black
             scoreCounter = scoreCounter + 5
@@ -553,6 +578,7 @@ class GameScene: SKScene {
             }
         }
         else if (classBool && self.equivCount[equivNum] >= 250) {
+            /*
             if (equivNum == i)
             {
                 galaxy.position = node.position
@@ -561,8 +587,12 @@ class GameScene: SKScene {
                 galaxy.isHidden = false
             }
             else{
+                //print("dafu...")
                 galaxy.isHidden = true
-            }
+            }*/
+            
+            size = 5
+            
             node.color = self.classColors[5]
             //node.color = black
             scoreCounter = scoreCounter + 6
@@ -575,7 +605,15 @@ class GameScene: SKScene {
         else {
             node.color = UIColor(red: 0.0, green: 0.5, blue: 1.0, alpha: 1.0)
             galaxy.isHidden = true
+            isOff = true
         }
+        if(!isOff){
+            galaxy.position = node.position
+            galaxy.zPosition = node.zPosition + 1.0
+            galaxy.size = galaxySizes[size]
+            galaxy.isHidden = false
+        }
+        
         let c : UIColor = node.color
         var r : CGFloat = 0
         var g : CGFloat = 0
